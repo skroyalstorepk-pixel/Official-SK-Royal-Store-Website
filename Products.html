@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +13,202 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+}
+
+.header{
+background:#111;
+border-bottom:2px solid #d4af37;
+padding:18px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo h2{
+color:#d4af37;
+font-size:32px;
+}
+
+.logo p{
+color:white;
+font-size:14px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:600;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+.order-btn{
+background:#d4af37;
+padding:12px 28px;
+border-radius:8px;
+text-decoration:none;
+color:#111;
+font-weight:bold;
+}
+
+.banner{
+text-align:center;
+padding:60px 20px;
+background:#151515;
+border-bottom:1px solid #d4af37;
+}
+
+.banner h1{
+font-size:45px;
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.banner p{
+font-size:18px;
+color:#ddd;
+}
+
+.products{
+width:90%;
+margin:60px auto;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+}
+
+.card{
+
+background:#181818;
+border:2px solid #d4af37;
+border-radius:15px;
+overflow:hidden;
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 20px rgba(212,175,55,.5);
+
+}
+
+.card img{
+
+width:100%;
+height:260px;
+object-fit:cover;
+
+}
+
+.info{
+
+padding:20px;
+
+text-align:center;
+
+}
+
+.info h3{
+
+color:#d4af37;
+
+font-size:28px;
+
+margin-bottom:12px;
+
+}
+
+.price{
+
+font-size:30px;
+
+font-weight:bold;
+
+margin-bottom:18px;
+
+}
+
+.btns{
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.details{
+
+background:#222;
+
+padding:10px 18px;
+
+border-radius:8px;
+
+color:white;
+
+text-decoration:none;
+
+}
+
+.buy{
+
+background:#d4af37;
+
+padding:10px 22px;
+
+border-radius:8px;
+
+color:#111;
+
+font-weight:bold;
+
+text-decoration:none;
+
+}
+
+footer{
+
+background:#111;
+
+padding:20px;
+
+text-align:center;
+
+margin-top:60px;
+
+border-top:2px solid #d4af37;
+
+}
+
+</style>
+
 </head>
 
 <body>
@@ -22,203 +217,198 @@
 
 <div class="logo">
 
-<img src="images/logo.png" alt="SK Royal Store">
-
-<div class="logo-text">
 <h2>SK Royal Store</h2>
+
 <p>Premium Shopping Experience</p>
-</div>
 
 </div>
 
-<nav class="navbar">
+<nav>
+
 <a href="index.html">Home</a>
-<a href="Products.html" class="active">Products</a>
+
+<a href="Products.html">Products</a>
+
 <a href="about.html">About Us</a>
+
 <a href="contact.html">Contact Us</a>
+
 </nav>
 
-<a href="https://wa.me/923086410774" class="order-btn">
+<a class="order-btn" href="contact.html">
+
 Order Now
+
 </a>
 
 </header>
 
-<section class="page-banner">
+<section class="banner">
 
 <h1>Our Premium Products</h1>
 
+<p>Best Quality • Fast Delivery • Cash On Delivery</p>
+
+</section>
+
+<section class="products"><!-- Green Fan -->
+<div class="card">
+<img src="green-fan-1.png" alt="Green Fan">
+<div class="info">
+<h3>Mini Foldable Fan (Green)</h3>
+<div class="price">Rs. 1,799</div>
+<div class="btns">
+<a href="green-fan.html" class="details">View Details</a>
+<a href="https://wa.me/923086410774" class="buy">Order Now</a>
+</div>
+</div>
+</div>
+
+<!-- Sky Blue Fan -->
+<div class="card">
+<img src="sky-blue-fan-1.png" alt="Sky Blue Fan">
+<div class="info">
+<h3>Mini Foldable Fan (Sky Blue)</h3>
+<div class="price">Rs. 1,799</div>
+<div class="btns">
+<a href="sky-blue-fan.html" class="details">View Details</a>
+<a href="https://wa.me/923086410774" class="buy">Order Now</a>
+</div>
+</div>
+</div>
+
+<!-- Pink Black Fan -->
+<div class="card">
+<img src="pink-black-fan-1.png" alt="Pink Black Fan">
+<div class="info">
+<h3>Mini Foldable Fan (Pink Black)</h3>
+<div class="price">Rs. 1,799</div>
+<div class="btns">
+<a href="pink-black-fan.html" class="details">View Details</a>
+<a href="https://wa.me/923086410774" class="buy">Order Now</a>
+</div>
+</div>
+</div>
+
+<!-- White Blue Air Cooler -->
+<div class="card">
+<img src="aircooler-blue-1.png" alt="Mini Air Cooler">
+<div class="info">
+<h3>Mini Air Cooler</h3>
+<div class="price">Rs. 2,999</div>
+<div class="btns">
+<a href="aircooler-blue.html" class="details">View Details</a>
+<a href="https://wa.me/923086410774" class="buy">Order Now</a>
+</div>
+</div>
+</div>
+
+<!-- White Black Air Cooler -->
+<div class="card">
+<img src="aircooler-black-1.png" alt="Mini Air Cooler">
+<div class="info">
+<h3>Mini Air Cooler (Black)</h3>
+<div class="price">Rs. 2,999</div>
+<div class="btns">
+<a href="aircooler-black.html" class="details">View Details</a>
+<a href="https://wa.me/923086410774" class="buy">Order Now</a>
+</div>
+</div>
+</div>
+
+<!-- Power Bank -->
+<div class="card">
+<img src="powerbank-1.png" alt="Power Bank">
+<div class="info">
+<h3>Fast Charging Power Bank</h3>
+<div class="price">Rs. 2,499</div>
+<div class="btns">
+<a href="powerbank.html" class="details">View Details</a>
+<a href="https://wa.me/923086410774" class="buy">Order Now</a>
+</div>
+</div>
+</div>
+
+<!-- Steel Bottle -->
+<div class="card">
+<img src="steel-bottle-1.png" alt="Steel Bottle">
+<div class="info">
+<h3>Stainless Steel Bottle</h3>
+<div class="price">Rs. 999</div>
+<div class="btns">
+<a href="steel-bottle.html" class="details">View Details</a>
+<a href="https://wa.me/923086410774" class="buy">Order Now</a>
+</div>
+</div>
+</div>
+
+<!-- Digital Bottle -->
+<div class="card">
+<img src="digital-bottle-1.png" alt="Digital Bottle">
+<div class="info">
+<h3>Digital Temperature Bottle</h3>
+<div class="price">Rs. 1,299</div>
+<div class="btns">
+<a href="digital-bottle.html" class="details">View Details</a>
+<a href="https://wa.me/923086410774" class="buy">Order Now</a>
+</div>
+</div>
+</div>
+
+<!-- Anellas Suit -->
+<div class="card">
+<img src="anellas-suit-1.png" alt="Anellas Suit">
+<div class="info">
+<h3>Anellas Lawn Suit</h3>
+<div class="price">Rs. 3,999</div>
+<div class="btns">
+<a href="anellas-suit.html" class="details">View Details</a>
+<a href="https://wa.me/923086410774" class="buy">Order Now</a>
+</div>
+</div>
+</div>
+
+<!-- Baroque Suit -->
+<div class="card">
+<img src="baroque-suit-1.png" alt="Baroque Suit">
+<div class="info">
+<h3>Baroque Lawn Suit</h3>
+<div class="price">Rs. 3,999</div>
+<div class="btns">
+<a href="baroque-suit.html" class="details">View Details</a>
+<a href="https://wa.me/923086410774" class="buy">Order Now</a>
+</div>
+</div>
+</div></section>
+
+<footer>
+
+<h2 style="color:#d4af37; margin-bottom:10px;">
+SK Royal Store
+</h2>
+
 <p>
-High Quality Products | Best Prices | Fast Delivery Across Pakistan
+Premium Shopping Experience
 </p>
 
-</section>
+<br>
 
-<section class="products-grid"><div class="product-card">
+<p>
+📞 WhatsApp: +92 308 6410774
+</p>
 
-<img src="images/powerbank-1.png" alt="Power Bank">
+<p>
+📍 Pakistan
+</p>
 
-<h3>Fast Charging Power Bank</h3>
+<br>
 
-<h2>Rs. 2,999</h2>
-
-<a href="powerbank.html" class="view-btn">View Details</a>
-
-<a href="https://wa.me/923086410774?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20the%20Power%20Bank." class="order-btn">
-Order Now
-</a>
-
-</div>
-
-
-<div class="product-card">
-
-<img src="images/steel-bottle-1.png" alt="Steel Bottle">
-
-<h3>Stainless Steel Bottle</h3>
-
-<h2>Rs. 1,499</h2>
-
-<a href="steel-bottle.html" class="view-btn">View Details</a>
-
-<a href="https://wa.me/923086410774?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20the%20Stainless%20Steel%20Bottle." class="order-btn">
-Order Now
-</a>
-
-</div>
-
-
-<div class="product-card">
-
-<img src="images/digital-bottle-1.png" alt="Digital Bottle">
-
-<h3>Digital Temperature Bottle</h3>
-
-<h2>Rs. 1,499</h2>
-
-<a href="digital-bottle.html" class="view-btn">View Details</a>
-
-<a href="https://wa.me/923086410774?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20the%20Digital%20Temperature%20Bottle." class="order-btn">
-Order Now
-</a>
-
-</div>
-
-
-<div class="product-card">
-
-<img src="images/anellas-suit-1.png" alt="Anellas Lawn Suit">
-
-<h3>Anellas Lawn Suit</h3>
-
-<h2>Rs. 3,999</h2>
-
-<a href="anellas-suit.html" class="view-btn">View Details</a>
-
-<a href="https://wa.me/923086410774?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20the%20Anellas%20Lawn%20Suit." class="order-btn">
-Order Now
-</a>
-
-</div>
-
-
-<div class="product-card">
-
-<img src="images/baroque-suit-1.png" alt="Baroque Lawn Suit">
-
-<h3>Baroque Lawn Suit</h3>
-
-<h2>Rs. 3,999</h2>
-
-<a href="baroque-suit.html" class="view-btn">View Details</a>
-
-<a href="https://wa.me/923086410774?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20the%20Baroque%20Lawn%20Suit." class="order-btn">
-Order Now
-</a>
-
-</div><div class="product-card">
-
-<img src="images/aircooler-blue-1.png" alt="Mini Air Cooler Blue">
-
-<h3>Mini Air Cooler (White Blue)</h3>
-
-<h2>Rs. 2,999</h2>
-
-<a href="aircooler-blue.html" class="view-btn">View Details</a>
-
-<a href="https://wa.me/923086410774?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20the%20White%20Blue%20Mini%20Air%20Cooler." class="order-btn">Order Now</a>
-
-</div>
-
-
-<div class="product-card">
-
-<img src="images/aircooler-black-1.png" alt="Mini Air Cooler Black">
-
-<h3>Mini Air Cooler (White Black)</h3>
-
-<h2>Rs. 3,099</h2>
-
-<a href="aircooler-black.html" class="view-btn">View Details</a>
-
-<a href="https://wa.me/923086410774?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20the%20White%20Black%20Mini%20Air%20Cooler." class="order-btn">Order Now</a>
-
-</div>
-
-
-<div class="product-card">
-
-<img src="images/green-fan-1.png" alt="Green Fan">
-
-<h3>Mini Foldable Fan (Green)</h3>
-
-<h2>Rs. 1,799</h2>
-
-<a href="green-fan.html" class="view-btn">View Details</a>
-
-<a href="https://wa.me/923086410774?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20the%20Green%20Mini%20Foldable%20Fan." class="order-btn">Order Now</a>
-
-</div>
-
-
-<div class="product-card">
-
-<img src="images/sky-blue-fan-1.png" alt="Sky Blue Fan">
-
-<h3>Mini Foldable Fan (Sky Blue)</h3>
-
-<h2>Rs. 1,599</h2>
-
-<a href="sky-blue-fan.html" class="view-btn">View Details</a>
-
-<a href="https://wa.me/923086410774?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20the%20Sky%20Blue%20Mini%20Foldable%20Fan." class="order-btn">Order Now</a>
-
-</div>
-
-
-<div class="product-card">
-
-<img src="images/pink-black-fan-1.png" alt="Pink Black Fan">
-
-<h3>Mini Foldable Fan (Pink Black)</h3>
-
-<h2>Rs. 1,499</h2>
-
-<a href="pink-black-fan.html" class="view-btn">View Details</a>
-
-<a href="https://wa.me/923086410774?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20the%20Pink%20Black%20Mini%20Foldable%20Fan." class="order-btn">Order Now</a>
-
-</div>
-
-</section>
-
-<footer class="simple-footer">
-
-<p>© 2026 SK Royal Store | All Rights Reserved.</p>
+<p style="color:#aaa;">
+© 2026 SK Royal Store. All Rights Reserved.
+</p>
 
 </footer>
 
-<script src="script.js"></script>
-
 </body>
+
 </html>
