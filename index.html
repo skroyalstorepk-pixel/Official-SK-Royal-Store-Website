@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK Royal Store - Home</title>
+    <title>SK Royal Store - Official Website</title>
     <style>
         body { font-family: 'Poppins', Arial, sans-serif; margin: 0; padding: 0; background-color: #0f0f0f; color: #fff; }
         header { background-color: #000; color: #d4af37; padding: 20px; text-align: center; border-bottom: 2px solid #d4af37; }
@@ -11,20 +11,23 @@
         nav { background-color: #1a1a1a; padding: 12px; text-align: center; border-bottom: 1px solid #333; }
         nav a { color: #d4af37; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 16px; }
         nav a:hover { color: #fff; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), #1a1a1a; border-bottom: 1px solid #d4af37; padding: 50px 20px; text-align: center; }
-        .hero h1 { color: #d4af37; margin: 0 0 10px 0; }
-        .hero-btn { background: linear-gradient(135deg, #d4af37, #aa7c11); color: #000; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-size: 18px; font-weight: bold; display: inline-block; margin-top: 15px; }
-        .hero-btn:hover { background: #fff; }
-        .container { max-width: 1100px; margin: 30px auto; padding: 0 15px; }
-        .section-title { text-align: center; margin-bottom: 30px; color: #d4af37; font-size: 26px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        
+        .hero { text-align: center; padding: 50px 20px; background: #141414; border-bottom: 1px solid #222; }
+        .hero h2 { color: #d4af37; font-size: 32px; margin-bottom: 10px; }
+        .hero p { color: #ccc; font-size: 16px; max-width: 600px; margin: 0 auto 20px auto; }
+        .btn-main { background: linear-gradient(135deg, #d4af37, #aa7c11); color: #000; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 6px; font-size: 16px; display: inline-block; }
+        .btn-main:hover { background: #fff; }
+        
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 15px; }
+        .section-title { text-align: center; margin-bottom: 30px; color: #d4af37; font-size: 24px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
         .product-card { background: #181818; border: 1px solid #333; border-radius: 10px; padding: 15px; text-align: center; transition: 0.3s; }
-        .product-card:hover { border-color: #d4af37; transform: translateY(-3px); }
-        .product-card img { max-width: 100%; height: 180px; object-fit: contain; border-radius: 5px; }
-        .product-card h3 { font-size: 16px; margin: 12px 0 5px 0; color: #fff; }
-        .price { color: #d4af37; font-weight: bold; font-size: 18px; margin-bottom: 12px; }
-        .btn-link { background: linear-gradient(135deg, #d4af37, #aa7c11); color: #000; text-decoration: none; padding: 8px 18px; border-radius: 5px; display: inline-block; font-weight: bold; }
-        .btn-link:hover { background: #fff; }
+        .product-card:hover { border-color: #d4af37; }
+        .product-card img { max-width: 100%; height: 160px; object-fit: contain; border-radius: 5px; }
+        .product-card h3 { font-size: 15px; margin: 10px 0 5px 0; color: #fff; }
+        .price { color: #d4af37; font-weight: bold; font-size: 16px; margin-bottom: 10px; }
+        .btn-sm { background: #d4af37; color: #000; text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 13px; font-weight: bold; display: inline-block; }
+        
         footer { background-color: #000; color: #777; text-align: center; padding: 15px; margin-top: 40px; border-top: 1px solid #333; }
     </style>
 </head>
@@ -37,45 +40,45 @@
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="products.html">All Products</a>
+    <a href="Products.html">All Products</a>
 </nav>
 
 <div class="hero">
-    <h1>KhushAamdeed SK Royal Store Par!</h1>
-    <p style="color: #ccc;">Aala quality fans, bottles, powerbanks aur branded suits behtareen qeemat mein hasil karein.</p>
-    <a href="products.html" class="hero-btn">🛒 Shop All Products</a>
+    <h2>KhushAamdeed SK Royal Store Par!</h2>
+    <p>Aala quality fans, bottles, powerbanks aur branded suits behtareen qeemat mein hasil karein.</p>
+    <a href="Products.html" class="btn-main">🛒 Shop All Products</a>
 </div>
 
 <div class="container">
-    <h2 class="section-title">🌟 Featured Products</h2>
+    <h2 class="section-title">⭐ Featured Products</h2>
     <div class="product-grid">
 
         <div class="product-card">
-            <img src="pink-black-fan-1.png" alt="Pink Black Fan">
-            <h3>Pink & Black Fan</h3>
+            <img src="pink-black-fan-1.png" alt="Portable Fan">
+            <h3>Portable Rechargeable Fan</h3>
             <p class="price">Rs. 1,950</p>
-            <a href="pink-black-fan.html" class="btn-link">View Details</a>
+            <a href="pink-black-fan.html" class="btn-sm">View Details</a>
         </div>
 
         <div class="product-card">
-            <img src="aircooler-blue-1.png" alt="Air Cooler Blue">
-            <h3>Blue Air Cooler</h3>
+            <img src="aircooler-black-1.png" alt="Air Cooler">
+            <h3>Mini Air Cooler</h3>
             <p class="price">Rs. 2,850</p>
-            <a href="aircooler-blue.html" class="btn-link">View Details</a>
+            <a href="aircooler-black.html" class="btn-sm">View Details</a>
         </div>
 
         <div class="product-card">
             <img src="digital-bottle-1.png" alt="Digital Bottle">
-            <h3>Digital Bottle</h3>
+            <h3>Digital Temperature Bottle</h3>
             <p class="price">Rs. 1,450</p>
-            <a href="digital-bottle.html" class="btn-link">View Details</a>
+            <a href="digital-bottle.html" class="btn-sm">View Details</a>
         </div>
 
         <div class="product-card">
             <img src="powerbank-1.png" alt="Powerbank">
-            <h3>Fast Powerbank</h3>
+            <h3>High Speed Powerbank</h3>
             <p class="price">Rs. 2,200</p>
-            <a href="powerbank.html" class="btn-link">View Details</a>
+            <a href="powerbank.html" class="btn-sm">View Details</a>
         </div>
 
     </div>
