@@ -1,100 +1,360 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products - SK Royal Store</title>
-    <style>
-        body { font-family: 'Poppins', Arial, sans-serif; margin: 0; padding: 0; background-color: #0f0f0f; color: #fff; }
-        header { background-color: #000; color: #d4af37; padding: 20px; text-align: center; border-bottom: 2px solid #d4af37; }
-        header h1 { margin: 0; font-size: 28px; }
-        nav { background-color: #1a1a1a; padding: 12px; text-align: center; border-bottom: 1px solid #333; }
-        nav a { color: #d4af37; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 16px; }
-        nav a:hover { color: #fff; }
-        .container { max-width: 1100px; margin: 30px auto; padding: 0 15px; }
-        .section-title { text-align: center; margin-bottom: 30px; color: #d4af37; font-size: 26px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .product-card { background: #181818; border: 1px solid #333; border-radius: 10px; padding: 15px; text-align: center; transition: 0.3s; }
-        .product-card:hover { border-color: #d4af37; transform: translateY(-3px); }
-        .product-card img { max-width: 100%; height: 180px; object-fit: contain; border-radius: 5px; }
-        .product-card h3 { font-size: 16px; margin: 12px 0 5px 0; color: #fff; }
-        .price { color: #d4af37; font-weight: bold; font-size: 18px; margin-bottom: 12px; }
-        .btn-link { background: linear-gradient(135deg, #d4af37, #aa7c11); color: #000; text-decoration: none; padding: 8px 18px; border-radius: 5px; display: inline-block; font-weight: bold; }
-        .btn-link:hover { background: #fff; }
-        footer { background-color: #000; color: #777; text-align: center; padding: 15px; margin-top: 40px; border-top: 1px solid #333; }
-    </style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Products | SK Royal Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<header>
-    <h1>👑 SK Royal Store</h1>
-    <p style="color: #ccc; margin-top: 5px;">Aap Ka Aatmad, Humari Pehchan</p>
-</header>
+<!-- HEADER -->
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="Products.html">All Products</a>
-</nav>
+<header class="header">
 
-<div class="container">
-    <h2 class="section-title">🛍️ Our Complete Collection</h2>
-    <div class="product-grid">
+<div class="logo">
 
-        <div class="product-card">
-            <img src="powerbank-1.png" alt="Powerbank">
-            <h3>High Speed Powerbank</h3>
-            <p class="price">Rs. 2,200</p>
-            <a href="powerbank.html" class="btn-link">View Details</a>
-        </div>
+<img src="logo.png" alt="SK Royal Store">
 
-        <div class="product-card">
-            <img src="pink-black-fan-1.png" alt="Pink Black Fan">
-            <h3>Pink & Black Fan</h3>
-            <p class="price">Rs. 1,950</p>
-            <a href="pink-black-fan.html" class="btn-link">View Details</a>
-        </div>
+<div>
 
-        <div class="product-card">
-            <img src="sky-blue-fan-1.png" alt="Sky Blue Fan">
-            <h3>Sky Blue Mini Fan</h3>
-            <p class="price">Rs. 1,850</p>
-            <a href="sky-blue-fan.html" class="btn-link">View Details</a>
-        </div>
+<h2>SK Royal Store</h2>
 
-        <div class="product-card">
-            <img src="green-fan-1.png" alt="Green Fan">
-            <h3>Green Portable Fan</h3>
-            <p class="price">Rs. 1,850</p>
-            <a href="green-fan.html" class="btn-link">View Details</a>
-        </div>
+<p>Quality You Can Trust</p>
 
-        <div class="product-card">
-            <img src="aircooler-black-1.png" alt="Black Air Cooler">
-            <h3>Black Air Cooler</h3>
-            <p class="price">Rs. 2,850</p>
-            <a href="aircooler-black.html" class="btn-link">View Details</a>
-        </div>
-
-        <div class="product-card">
-            <img src="digital-bottle-1.png" alt="Digital Bottle">
-            <h3>Digital Temperature Bottle</h3>
-            <p class="price">Rs. 1,450</p>
-            <a href="digital-bottle.html" class="btn-link">View Details</a>
-        </div>
-
-        <div class="product-card">
-            <img src="steel-bottle-1.png" alt="Steel Bottle">
-            <h3>Stainless Steel Bottle</h3>
-            <p class="price">Rs. 1,250</p>
-            <a href="steel-bottle.html" class="btn-link">View Details</a>
-        </div>
-
-    </div>
 </div>
 
+</div>
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+
+<a href="Products.html" class="active">Products</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<a href="https://wa.me/923086410774" class="order-btn">
+
+Order Now
+
+</a>
+
+</header>
+
+<!-- PAGE TITLE -->
+
+<section class="page-banner">
+
+<h1>Our Premium Products</h1>
+
+<p>
+
+Choose High Quality Products at Best Prices
+
+</p>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+<input type="text"
+
+placeholder="Search Products...">
+
+</section>
+
+<!-- CATEGORY -->
+
+<section class="categories">
+
+<button>All</button>
+
+<button>Fans</button>
+
+<button>Coolers</button>
+
+<button>Power Banks</button>
+
+<button>Bottles</button>
+
+<button>Ladies Suits</button>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products-grid">
+
+<div class="product-card">
+
+<img src="green-fan-1.png" alt="Green Fan">
+
+<h3>Mini Foldable Fan</h3>
+
+<p>Portable Rechargeable Fan</p>
+
+<span class="price">Rs.1799</span>
+
+<a href="green-fan.html" class="gold-btn">
+
+View Details
+
+</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="pink-black-fan-1.png" alt="Pink Fan">
+
+<h3>Mini Foldable Fan</h3>
+
+<p>Portable Rechargeable Fan</p>
+
+<span class="price">Rs.1799</span>
+
+<a href="pink-black-fan.html" class="gold-btn">
+
+View Details
+
+</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="aircooler-blue-1.png" alt="Cooler">
+
+<h3>Mini Air Cooler</h3>
+
+<p>USB Cooling Fan</p>
+
+<span class="price">Rs.2999</span>
+
+<a href="aircooler-blue.html" class="gold-btn">
+
+View Details
+
+</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="aircooler-black-1.png" alt="Cooler">
+
+<h3>Mini Air Cooler</h3>
+
+<p>USB Cooling Fan</p>
+
+<span class="price">Rs.3399</span>
+
+<a href="aircooler-black.html" class="gold-btn">
+
+View Details
+
+</a>
+
+</div><div class="product-card">
+
+<img src="powerbank-1.png" alt="Power Bank">
+
+<h3>Power Bank</h3>
+
+<p>Fast Charging Power Bank</p>
+
+<span class="price">Rs.3899</span>
+
+<a href="powerbank.html" class="gold-btn">
+
+View Details
+
+</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="digital-bottle-1.png" alt="Digital Bottle">
+
+<h3>Digital Bottle</h3>
+
+<p>LED Temperature Display</p>
+
+<span class="price">Rs.1499</span>
+
+<a href="digital-bottle.html" class="gold-btn">
+
+View Details
+
+</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="steel-bottle-1.png" alt="Steel Bottle">
+
+<h3>Steel Bottle</h3>
+
+<p>Premium Stainless Steel Bottle</p>
+
+<span class="price">Rs.1849</span>
+
+<a href="steel-bottle.html" class="gold-btn">
+
+View Details
+
+</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="anellas-suit-1.png" alt="Anellas Lawn Suit">
+
+<h3>Anellas Lawn Suit</h3>
+
+<p>Premium Summer Collection</p>
+
+<span class="price">Rs.3999</span>
+
+<a href="anellas-suit.html" class="gold-btn">
+
+View Details
+
+</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="baroque-suit-1.png" alt="Baroque Lawn Suit">
+
+<h3>Baroque Lawn Suit</h3>
+
+<p>Luxury Lawn Collection</p>
+
+<span class="price">Rs.3999</span>
+
+<a href="baroque-suit.html" class="gold-btn">
+
+View Details
+
+</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="hat-1.png" alt="Fashion Hat">
+
+<h3>Fashion Hat</h3>
+
+<p>Stylish & Comfortable</p>
+
+<span class="price">Rs.1299</span>
+
+<a href="hat.html" class="gold-btn">
+
+View Details
+
+</a>
+
+</div>
+
+</section><!-- ================= WHATSAPP SECTION ================= -->
+
+<section class="whatsapp-section">
+
+<h2>Need Help?</h2>
+
+<p>Order directly on WhatsApp for quick support.</p>
+
+<a href="https://wa.me/923086410774" class="gold-btn">
+
+Chat on WhatsApp
+
+</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
-    <p>&copy; 2026 SK Royal Store - All Rights Reserved</p>
+
+<div class="footer-content">
+
+<div>
+
+<h2>SK Royal Store</h2>
+
+<p>Quality You Can Trust</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a><br>
+
+<a href="Products.html">Products</a><br>
+
+<a href="about.html">About Us</a><br>
+
+<a href="contact.html">Contact Us</a>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📞 +92 308 6410774</p>
+
+<p>📧 skroyalstore.pk@gmail.com</p>
+
+<p>🚚 Delivery All Over Pakistan</p>
+
+<p>💵 Cash On Delivery</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 SK Royal Store. All Rights Reserved.
+
+</p>
+
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+
 </html>
