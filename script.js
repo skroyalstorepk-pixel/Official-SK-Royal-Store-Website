@@ -1,70 +1,70 @@
-// ===================================
-// SK ROYAL STORE JAVASCRIPT
-// ===================================
+// ===============================
+// SK ROYAL STORE HERO SLIDER
+// ===============================
 
-// 1. HERO SLIDER
 const slides = document.querySelectorAll(".slide");
-let currentSlide = 0;
 
-function showSlide(index) {
-    if (slides.length === 0) return;
-    
-    slides.forEach((slide) => {
-        slide.classList.remove("active");
-    });
+let current = 0;
 
-    slides[index].classList.add("active");
-}
+function showSlide(index){
 
-if (slides.length > 0) {
-    setInterval(() => {
-        currentSlide++;
-        if (currentSlide >= slides.length) {
-            currentSlide = 0;
-        }
-        showSlide(currentSlide);
-    }, 4000);
-}
-
-// 2. MOBILE MENU TOGGLE
-function toggleMenu() {
-    let menu = document.querySelector(".nav-links");
-    if (menu) {
-        menu.classList.toggle("active");
-    }
-}
-
-// 3. PRODUCT SEARCH FUNCTIONALITY
-function searchProducts() {
-    let input = document.getElementById("searchBox");
-    if (!input) return;
-
-    let filter = input.value.toLowerCase();
-    let products = document.querySelectorAll(".product-card");
-
-    products.forEach(function (product) {
-        let name = product.innerText.toLowerCase();
-        if (name.includes(filter)) {
-            product.style.display = "block";
-        } else {
-            product.style.display = "none";
-        }
-    });
-}
-
-// 4. BUTTON CLICK SCALING EFFECT
-let buttons = document.querySelectorAll(".gold-btn");
-
-buttons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-        btn.style.transform = "scale(0.95)";
-        setTimeout(function () {
-            btn.style.transform = "scale(1)";
-        }, 150);
-    });
+slides.forEach(slide=>{
+slide.classList.remove("active");
 });
 
-// 5. PAGE LOAD LOG
-window.onload = function () {
-    console.log("Welcome to SK Royal Store");
-};
+slides[index].classList.add("active");
+
+}
+
+function nextSlide(){
+
+current++;
+
+if(current >= slides.length){
+
+current = 0;
+
+}
+
+showSlide(current);
+
+}
+
+setInterval(nextSlide,4000);
+
+// ===============================
+// PREVIOUS / NEXT BUTTONS
+// ===============================
+
+const nextBtn=document.querySelector(".next");
+const prevBtn=document.querySelector(".prev");
+
+if(nextBtn){
+
+nextBtn.addEventListener("click",()=>{
+
+nextSlide();
+
+});
+
+}
+
+if(prevBtn){
+
+prevBtn.addEventListener("click",()=>{
+
+current--;
+
+if(current<0){
+
+current=slides.length-1;
+
+}
+
+showSlide(current);
+
+});
+
+}
+
+showSlide(current);
