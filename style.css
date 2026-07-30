@@ -185,7 +185,7 @@ position:absolute;
 
 top:50%;
 
-left:8%;
+left:5%;
 
 transform:translateY(-50%);
 
@@ -220,11 +220,10 @@ color:#eee;
 }
 
 .hero-buttons{
-
 display:flex;
-
 gap:20px;
-
+justify-content:flex-start;
+margin-top:25px;
 }
 
 .gold-btn{
