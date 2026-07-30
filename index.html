@@ -1,201 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK Royal Store - Premium Shopping Experience</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #0b0b0b; color: #ffffff; line-height: 1.6; }
 
-        /* Top Header */
-        header { background-color: #111111; border-bottom: 2px solid #d4af37; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo-container { display: flex; align-items: center; gap: 15px; }
-        .logo-container img { height: 50px; width: 50px; border-radius: 50%; border: 1px solid #d4af37; }
-        .logo-text h1 { color: #d4af37; font-size: 24px; margin: 0; font-weight: bold; }
-        .logo-text p { color: #ccc; font-size: 12px; margin: 0; }
+<meta charset="UTF-8">
 
-        nav { display: flex; gap: 25px; align-items: center; }
-        nav a { color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px; transition: 0.3s; }
-        nav a:hover, nav a.active { color: #d4af37; }
-        
-        .btn-order-now { background-color: #d4af37; color: #000; padding: 10px 22px; border-radius: 6px; font-weight: bold; text-decoration: none; font-size: 14px; transition: 0.3s; }
-        .btn-order-now:hover { background-color: #fff; color: #000; }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Announcement Bar */
-        .announcement { background-color: #000; color: #d4af37; text-align: center; padding: 8px; font-size: 14px; font-weight: 600; letter-spacing: 1px; border-bottom: 1px solid #222; }
+<title>SK Royal Store | Quality You Can Trust</title>
 
-        /* Hero Banner */
-        .hero-banner { max-width: 1200px; margin: 20px auto; padding: 0 15px; }
-        .hero-banner img { width: 100%; height: auto; max-height: 450px; object-fit: cover; border-radius: 10px; border: 1px solid #333; display: block; }
+<meta name="description" content="Premium Online Shopping Store in Pakistan">
 
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 15px; }
-        .section-title { text-align: center; font-size: 28px; color: #d4af37; margin-bottom: 30px; font-weight: bold; }
+<link rel="stylesheet" href="style.css">
 
-        /* Products Grid */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-        .product-card { background-color: #141414; border: 1px solid #d4af37; border-radius: 12px; overflow: hidden; text-align: center; padding: 15px; transition: 0.3s; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2); }
-        .product-card img { width: 100%; height: 220px; object-fit: contain; background: #000; border-radius: 8px; }
-        .product-title { font-size: 18px; color: #d4af37; margin: 15px 0 8px 0; font-weight: bold; }
-        .price { font-size: 20px; color: #ffffff; font-weight: bold; margin-bottom: 15px; }
-        .btn-details { background-color: #d4af37; color: #000; padding: 8px 18px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-        /* About Us Section */
-        .about-section { background-color: #111; border: 1px solid #222; border-radius: 10px; padding: 30px; margin: 40px 0; display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
-        .about-content { flex: 1; min-width: 280px; }
-        .about-content h2 { color: #d4af37; margin-bottom: 15px; }
-        .about-content p { color: #ccc; margin-bottom: 10px; }
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        /* Customer Reviews */
-        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .review-card { background: #141414; border: 1px solid #d4af37; border-radius: 8px; padding: 20px; text-align: center; font-style: italic; color: #ddd; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        /* Newsletter & Footer */
-        .newsletter { text-align: center; margin: 40px 0; }
-        .newsletter input { padding: 12px; width: 280px; border-radius: 20px 0 0 20px; border: none; outline: none; }
-        .newsletter button { padding: 12px 25px; border-radius: 0 20px 20px 0; border: none; background: #d4af37; color: #000; font-weight: bold; cursor: pointer; }
-
-        footer { background-color: #050505; border-top: 1px solid #222; padding: 40px 20px 20px 20px; color: #aaa; }
-        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
-        .footer-col h3, .footer-col h4 { color: #fff; margin-bottom: 15px; }
-        .footer-col a { color: #aaa; text-decoration: none; display: block; margin-bottom: 8px; }
-        .footer-col a:hover { color: #d4af37; }
-        .copyright { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #1a1a1a; font-size: 13px; }
-
-        /* WhatsApp Floating Button */
-        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: white; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; }
-    </style>
 </head>
+
 <body>
 
-<!-- Header -->
-<header>
-    <div class="logo-container">
-        <img src="logo.png" alt="SK Royal Store Logo" onerror="this.style.display='none'">
-        <div class="logo-text">
-            <h1>SK Royal Store</h1>
-            <p>Quality You Can Trust</p>
-        </div>
-    </div>
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="Products.html">Products</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
-    <a href="Products.html" class="btn-order-now">Order Now</a>
-</header>
+<!-- ================= HEADER ================= -->
 
-<!-- Announcement -->
-<div class="announcement">
-    Best Quality • Fast Delivery • Cash On Delivery
+<header class="header">
+
+<div class="logo">
+
+<img src="logo.png" alt="SK Royal Store">
+
+<div>
+
+<h2>SK Royal Store</h2>
+
+<p>Quality You Can Trust</p>
+
 </div>
 
-<!-- Main Banner -->
-<div class="hero-banner">
-    <img src="aircooler-black-1.png" alt="Mini Air Cooler Banner">
 </div>
 
-<!-- Products Section -->
-<div class="container">
-    <h2 class="section-title">Our Featured Products</h2>
-    <div class="product-grid">
+<nav class="navbar">
 
-        <div class="product-card">
-            <img src="green-fan-1.png" alt="Mini Foldable Fan (Green)">
-            <div class="product-title">Mini Foldable Fan (Green)</div>
-            <div class="price">Rs. 1,850</div>
-            <a href="green-fan.html" class="btn-details">View Details</a>
-        </div>
+<a href="index.html" class="active">Home</a>
 
-        <div class="product-card">
-            <img src="sky-blue-fan-1.png" alt="Mini Foldable Fan (Sky Blue)">
-            <div class="product-title">Mini Foldable Fan (Sky Blue)</div>
-            <div class="price">Rs. 1,850</div>
-            <a href="sky-blue-fan.html" class="btn-details">View Details</a>
-        </div>
+<a href="Products.html">Products</a>
 
-        <div class="product-card">
-            <img src="pink-black-fan-1.png" alt="Mini Foldable Fan (Pink Black)">
-            <div class="product-title">Mini Foldable Fan (Pink Black)</div>
-            <div class="price">Rs. 1,950</div>
-            <a href="pink-black-fan.html" class="btn-details">View Details</a>
-        </div>
+<a href="about.html">About</a>
 
-        <div class="product-card">
-            <img src="aircooler-black-1.png" alt="Mini Air Cooler">
-            <div class="product-title">Mini Air Cooler</div>
-            <div class="price">Rs. 2,850</div>
-            <a href="aircooler-black.html" class="btn-details">View Details</a>
-        </div>
+<a href="contact.html">Contact</a>
 
-    </div>
-</div>
+</nav>
 
-<!-- About Section -->
-<div class="container" id="about">
-    <div class="about-section">
-        <div class="about-content">
-            <h2>About SK Royal Store</h2>
-            <h3 style="color: #d4af37; margin-bottom: 10px;">Pakistan's Trusted Online Store</h3>
-            <p>SK Royal Store provides quality products at affordable prices. We bring trending electronics, fashion and daily use products with easy shopping and reliable service.</p>
-            <p>Our mission is to provide customers with the best online shopping experience across Pakistan.</p>
-        </div>
-    </div>
-</div>
+<a href="https://wa.me/923086410774" class="order-btn">
 
-<!-- Customer Reviews -->
-<div class="container">
-    <h2 class="section-title">Customer Reviews</h2>
-    <div class="reviews-grid">
-        <div class="review-card">
-            "Excellent product quality. Fast delivery and great service."
-        </div>
-        <div class="review-card">
-            "SK Royal Store has amazing products at reasonable prices."
-        </div>
-        <div class="review-card">
-            "Received my order on time. Highly recommended!"
-        </div>
-    </div>
-</div>
+Order Now
 
-<!-- Newsletter -->
-<div class="newsletter">
-    <input type="email" placeholder="Enter your email">
-    <button>Subscribe</button>
-</div>
-
-<!-- Footer -->
-<footer id="contact">
-    <div class="footer-grid">
-        <div class="footer-col">
-            <h3>SK Royal Store</h3>
-            <p>Your Trusted Online Shopping Store In Pakistan.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="Products.html">Products</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact Us</a>
-        </div>
-        <div class="footer-col">
-            <h4>Contact Us</h4>
-            <p>📞 +92 308 6410774</p>
-            <p>✉️ skroyalstore@gmail.com</p>
-        </div>
-    </div>
-    <div class="copyright">
-        © 2026 SK Royal Store. All Rights Reserved.
-    </div>
-</footer>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/923086410774" class="whatsapp-float" target="_blank">
-    💬 Order On WhatsApp
 </a>
 
+</header>
+
+<!-- ================= HERO SLIDER ================= -->
+
+<section class="hero-slider">
+
+<div class="slides">
+
+<img src="banner1.png" class="slide active" alt="Banner 1">
+
+<img src="banner2.png" class="slide" alt="Banner 2">
+
+<img src="banner3.png" class="slide" alt="Banner 3">
+
+<img src="banner4.png" class="slide" alt="Banner 4">
+
+<img src="banner5.png" class="slide" alt="Banner 5">
+
+</div>
+
+<div class="hero-overlay">
+
+<h1>SK Royal Store</h1>
+
+<h2>Quality You Can Trust</h2>
+
+<p>
+
+Premium Products • Fast Delivery • Cash On Delivery
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="Products.html" class="gold-btn">
+
+Shop Now
+
+</a>
+
+<a href="https://wa.me/923086410774" class="dark-btn">
+
+WhatsApp Order
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<div class="feature-box">
+
+<h3>🚚 Fast Delivery</h3>
+
+<p>Fast Delivery All Over Pakistan</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>💵 Cash On Delivery</h3>
+
+<p>Pay After Receiving Your Order</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>⭐ Premium Quality</h3>
+
+<p>Only High Quality Products</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>📞 24/7 Support</h3>
+
+<p>WhatsApp Customer Support</p>
+
+</div>
+
+</section><!-- ================= FEATURED PRODUCTS ================= -->
+
+<section class="featured-products">
+
+<h2 class="section-title">Featured Products</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="green-fan-1.png" alt="Green Fan">
+<h3>Mini Foldable Fan</h3>
+<p>Portable • Rechargeable • Foldable</p>
+<span class="price">Rs. 1,799</span>
+<a href="green-fan.html" class="gold-btn">View Details</a>
+</div>
+
+<div class="product-card">
+<img src="aircooler-blue-1.png" alt="Air Cooler">
+<h3>Mini Air Cooler</h3>
+<p>USB Powered • Powerful Cooling</p>
+<span class="price">Rs. 2,999</span>
+<a href="aircooler-blue.html" class="gold-btn">View Details</a>
+</div>
+
+<div class="product-card">
+<img src="powerbank-1.png" alt="Power Bank">
+<h3>Fast Charging Power Bank</h3>
+<p>High Capacity • Fast Charging</p>
+<span class="price">Rs. 2,499</span>
+<a href="powerbank.html" class="gold-btn">View Details</a>
+</div>
+
+<div class="product-card">
+<img src="digital-bottle-1.png" alt="Digital Bottle">
+<h3>Digital Bottle</h3>
+<p>LED Temperature Display</p>
+<span class="price">Rs. 1,299</span>
+<a href="digital-bottle.html" class="gold-btn">View Details</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why-choose">
+
+<h2 class="section-title">Why Choose SK Royal Store?</h2>
+
+<div class="why-grid">
+
+<div class="why-card">
+<h3>⭐ Premium Quality</h3>
+<p>We provide only high quality and reliable products.</p>
+</div>
+
+<div class="why-card">
+<h3>🚚 Fast Delivery</h3>
+<p>Delivery available across Pakistan.</p>
+</div>
+
+<div class="why-card">
+<h3>💵 Cash On Delivery</h3>
+<p>Pay after receiving your parcel.</p>
+</div>
+
+<div class="why-card">
+<h3>📱 WhatsApp Support</h3>
+<p>Quick support for orders and customer help.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BEST SELLERS ================= -->
+
+<section class="best-sellers">
+
+<h2 class="section-title">Best Selling Products</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="pink-black-fan-1.png" alt="Pink Black Fan">
+<h3>Mini Foldable Fan</h3>
+<span class="price">Rs. 1,799</span>
+<a href="pink-black-fan.html" class="gold-btn">Buy Now</a>
+</div>
+
+<div class="product-card">
+<img src="steel-bottle-1.png" alt="Steel Bottle">
+<h3>Steel Bottle</h3>
+<span class="price">Rs. 999</span>
+<a href="steel-bottle.html" class="gold-btn">Buy Now</a>
+</div>
+
+<div class="product-card">
+<img src="anellas-suit-1.png" alt="Anellas Suit">
+<h3>Anellas Lawn Suit</h3>
+<span class="price">Rs. 3,999</span>
+<a href="anellas-suit.html" class="gold-btn">Buy Now</a>
+</div>
+
+<div class="product-card">
+<img src="baroque-suit-1.png" alt="Baroque Suit">
+<h3>Baroque Lawn Suit</h3>
+<span class="price">Rs. 3,999</span>
+<a href="baroque-suit.html" class="gold-btn">Buy Now</a>
+</div>
+
+</div>
+
+</section><!-- ================= CUSTOMER REVIEWS ================= -->
+
+<section class="reviews">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="reviews-grid">
+
+<div class="review-card">
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+Amazing Quality. Fast Delivery. Highly Recommended.
+
+</p>
+
+<h4>Ali - Lahore</h4>
+
+</div>
+
+<div class="review-card">
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+Excellent Product. Packaging was Perfect.
+
+</p>
+
+<h4>Ahmed - Karachi</h4>
+
+</div>
+
+<div class="review-card">
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+Best Online Shopping Experience.
+
+</p>
+
+<h4>Usman - Islamabad</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHATSAPP ================= -->
+
+<section class="whatsapp-section">
+
+<h2>
+
+Need Help?
+
+</h2>
+
+<p>
+
+Contact us directly on WhatsApp.
+
+</p>
+
+<a href="https://wa.me/923086410774" class="gold-btn">
+
+Chat on WhatsApp
+
+</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-content">
+
+<div>
+
+<h2>SK Royal Store</h2>
+
+<p>Quality You Can Trust</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a><br>
+
+<a href="Products.html">Products</a><br>
+
+<a href="about.html">About</a><br>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📞 +92 308 6410774</p>
+
+<p>📧 skroyalstore.pk@gmail.com</p>
+
+<p>🚚 Delivery All Over Pakistan</p>
+
+<p>💵 Cash On Delivery</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 SK Royal Store. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
