@@ -1,53 +1,38 @@
 <!DOCTYPE html>
 <html lang="ur">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High Capacity Powerbank - SK Royal Store</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powerbank - SK Royal Store</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f9f9f9; }
-        .product-container { max-width: 900px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: flex; flex-wrap: wrap; gap: 20px; }
+        body { font-family: 'Poppins', Arial, sans-serif; margin: 0; padding: 0; background-color: #0f0f0f; color: #f5f5f5; }
+        header { background: #000; padding: 15px; text-align: center; border-bottom: 2px solid #d4af37; }
+        header h1 { color: #d4af37; margin: 0; font-size: 24px; }
+        nav { background: #1a1a1a; padding: 10px; text-align: center; border-bottom: 1px solid #333; }
+        nav a { color: #d4af37; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .product-container { max-width: 950px; margin: 30px auto; background: #181818; padding: 25px; border-radius: 12px; border: 1px solid #333; display: flex; flex-wrap: wrap; gap: 30px; }
         .product-image { flex: 1; min-width: 300px; text-align: center; }
-        .product-image img { max-width: 100%; border-radius: 8px; margin-bottom: 10px; }
-        .thumbnail-container { display: flex; gap: 10px; justify-content: center; }
-        .thumbnail-container img { width: 70px; height: 70px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #ddd; }
+        .product-image img { max-width: 100%; border-radius: 10px; border: 2px solid #333; margin-bottom: 15px; }
         .product-details { flex: 1; min-width: 300px; }
-        .badge { background: #27ae60; color: #fff; padding: 5px 10px; border-radius: 4px; font-size: 14px; font-weight: bold; display: inline-block; margin-bottom: 10px; }
-        .price { font-size: 24px; color: #e74c3c; font-weight: bold; margin: 10px 0; }
-        .btn-buy { background: #27ae60; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; font-size: 16px; margin-top: 15px; }
-        .features-list { padding-left: 20px; }
+        .badge { background: #d4af37; color: #000; padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: bold; display: inline-block; margin-bottom: 12px; }
+        h2 { color: #fff; font-size: 26px; margin-top: 0; }
+        .price { font-size: 26px; color: #d4af37; font-weight: bold; margin: 15px 0; }
+        .btn-buy { background: linear-gradient(135deg, #25d366, #128c7e); color: white; padding: 14px 25px; text-decoration: none; border-radius: 8px; display: inline-block; font-weight: bold; font-size: 18px; margin-top: 20px; }
+        footer { background: #000; color: #777; text-align: center; padding: 15px; margin-top: 40px; border-top: 1px solid #333; }
     </style>
 </head>
 <body>
-
+<header><h1>👑 SK Royal Store</h1></header>
+<nav><a href="index.html">Home</a><a href="products.html">All Products</a></nav>
 <div class="product-container">
-    <div class="product-image">
-        <img id="main-img" src="powerbank-1.png" alt="Powerbank">
-        <div class="thumbnail-container">
-            <img src="powerbank-1.png" onclick="document.getElementById('main-img').src=this.src">
-            <img src="powerbank-2.png" onclick="document.getElementById('main-img').src=this.src">
-        </div>
-    </div>
-
+    <div class="product-image"><img src="powerbank-1.png" alt="Powerbank"></div>
     <div class="product-details">
         <span class="badge">🚚 FREE Delivery Nationwide</span>
-        <span class="badge" style="background: #2980b9;">⚡ Fast Charging</span>
-        
-        <h2>🔋 High-Speed Portable Powerbank</h2>
-        <div class="price">Rs. 2,200 <span style="text-decoration: line-through; color: #7f8c8d; font-size: 16px;">Rs. 3,000</span></div>
-
-        <p>Safarr ya bijli ki load shedding ke dauran apne mobiles aur devices ko barqtareen tarike se charge rakhein is reliable powerbank ke sath.</p>
-
-        <h3>Key Features:</h3>
-        <ul class="features-list">
-            <li><strong>⚡ Fast Output:</strong> Tez tareen charging support.</li>
-            <li><strong>🛡️ Safe Circuitry:</strong> Overcharging aur overheating se mukammal hifazat.</li>
-            <li><strong>👜 Pocket Friendly:</strong> Compact aur lightweight design.</li>
-        </ul>
-
-        <a href="https://wa.me/923001234567?text=I%20want%20to%20buy%20Powerbank" class="btn-buy">🛒 Order Now via WhatsApp / COD</a>
+        <h2>High Speed Powerbank</h2>
+        <div class="price">Rs. 2,200</div>
+        <p style="color: #bbb;">Fast charging support karne wala portable powerbank.</p>
+        <a href="https://wa.me/923001234567?text=I%20want%20to%20buy%20Powerbank" class="btn-buy">💬 Order Now via WhatsApp / COD</a>
     </div>
 </div>
-
+<footer><p>&copy; 2026 SK Royal Store</p></footer>
 </body>
 </html>
