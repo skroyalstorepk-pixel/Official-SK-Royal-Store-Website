@@ -1,223 +1,201 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK Royal Store - Official Website</title>
+    <title>SK Royal Store - Premium Shopping Experience</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', Arial, sans-serif; background-color: #0f0f0f; color: #fff; line-height: 1.6; }
-        
-        header { background-color: #000; color: #d4af37; padding: 20px; text-align: center; border-bottom: 2px solid #d4af37; }
-        header h1 { font-size: 28px; margin: 0; }
-        
-        nav { background-color: #1a1a1a; padding: 12px; text-align: center; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: #d4af37; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 16px; }
-        nav a:hover { color: #fff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0b0b0b; color: #ffffff; line-height: 1.6; }
 
-        /* Banner Slider */
-        .slider-container { max-width: 1200px; margin: 20px auto; overflow: hidden; border-radius: 10px; position: relative; border: 1px solid #333; }
-        .slider { display: flex; width: 400%; animation: slide 16s infinite; }
-        .slide { width: 25%; }
-        .slide img { width: 100%; height: 380px; object-fit: cover; display: block; }
-        
-        @keyframes slide {
-            0% { transform: translateX(0%); }
-            20% { transform: translateX(0%); }
-            25% { transform: translateX(-25%); }
-            45% { transform: translateX(-25%); }
-            50% { transform: translateX(-50%); }
-            70% { transform: translateX(-50%); }
-            75% { transform: translateX(-75%); }
-            95% { transform: translateX(-75%); }
-            100% { transform: translateX(0%); }
-        }
+        /* Top Header */
+        header { background-color: #111111; border-bottom: 2px solid #d4af37; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo-container img { height: 50px; width: 50px; border-radius: 50%; border: 1px solid #d4af37; }
+        .logo-text h1 { color: #d4af37; font-size: 24px; margin: 0; font-weight: bold; }
+        .logo-text p { color: #ccc; font-size: 12px; margin: 0; }
 
-        /* 4 Qualities / Features */
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1200px; margin: 30px auto; padding: 0 15px; }
-        .feature-card { background: #181818; border: 1px solid #333; border-radius: 8px; padding: 20px; text-align: center; }
-        .feature-card h3 { color: #d4af37; font-size: 18px; margin-bottom: 8px; }
-        .feature-card p { color: #aaa; font-size: 14px; }
+        nav { display: flex; gap: 25px; align-items: center; }
+        nav a { color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px; transition: 0.3s; }
+        nav a:hover, nav a.active { color: #d4af37; }
+        
+        .btn-order-now { background-color: #d4af37; color: #000; padding: 10px 22px; border-radius: 6px; font-weight: bold; text-decoration: none; font-size: 14px; transition: 0.3s; }
+        .btn-order-now:hover { background-color: #fff; color: #000; }
+
+        /* Announcement Bar */
+        .announcement { background-color: #000; color: #d4af37; text-align: center; padding: 8px; font-size: 14px; font-weight: 600; letter-spacing: 1px; border-bottom: 1px solid #222; }
+
+        /* Hero Banner */
+        .hero-banner { max-width: 1200px; margin: 20px auto; padding: 0 15px; }
+        .hero-banner img { width: 100%; height: auto; max-height: 450px; object-fit: cover; border-radius: 10px; border: 1px solid #333; display: block; }
 
         .container { max-width: 1200px; margin: 40px auto; padding: 0 15px; }
-        .section-title { text-align: center; margin-bottom: 30px; color: #d4af37; font-size: 26px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+        .section-title { text-align: center; font-size: 28px; color: #d4af37; margin-bottom: 30px; font-weight: bold; }
 
-        /* 8 Products Grid */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .product-card { background: #181818; border: 1px solid #333; border-radius: 10px; padding: 15px; text-align: center; transition: 0.3s; }
-        .product-card:hover { border-color: #d4af37; transform: translateY(-3px); }
-        .product-card img { max-width: 100%; height: 180px; object-fit: contain; border-radius: 5px; }
-        .product-card h3 { font-size: 16px; margin: 12px 0 5px 0; color: #fff; }
-        .price { color: #d4af37; font-weight: bold; font-size: 17px; margin-bottom: 12px; }
-        .btn-sm { background: linear-gradient(135deg, #d4af37, #aa7c11); color: #000; text-decoration: none; padding: 8px 16px; border-radius: 5px; font-size: 14px; font-weight: bold; display: inline-block; }
-        .btn-sm:hover { background: #fff; }
+        /* Products Grid */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .product-card { background-color: #141414; border: 1px solid #d4af37; border-radius: 12px; overflow: hidden; text-align: center; padding: 15px; transition: 0.3s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2); }
+        .product-card img { width: 100%; height: 220px; object-fit: contain; background: #000; border-radius: 8px; }
+        .product-title { font-size: 18px; color: #d4af37; margin: 15px 0 8px 0; font-weight: bold; }
+        .price { font-size: 20px; color: #ffffff; font-weight: bold; margin-bottom: 15px; }
+        .btn-details { background-color: #d4af37; color: #000; padding: 8px 18px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; }
 
-        /* 4 Categories Grid */
-        .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .category-card { background: #141414; border: 1px solid #333; border-radius: 10px; padding: 25px; text-align: center; }
-        .category-card h3 { color: #d4af37; font-size: 20px; margin-bottom: 10px; }
-        .category-card p { color: #bbb; font-size: 14px; margin-bottom: 15px; }
+        /* About Us Section */
+        .about-section { background-color: #111; border: 1px solid #222; border-radius: 10px; padding: 30px; margin: 40px 0; display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
+        .about-content { flex: 1; min-width: 280px; }
+        .about-content h2 { color: #d4af37; margin-bottom: 15px; }
+        .about-content p { color: #ccc; margin-bottom: 10px; }
 
-        /* About Us Section with Logo */
-        .about-section { background: #141414; border: 1px solid #333; border-radius: 10px; padding: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-top: 50px; }
-        .about-text { flex: 1; min-width: 280px; }
-        .about-text h2 { color: #d4af37; font-size: 26px; margin-bottom: 15px; }
-        .about-text p { color: #ccc; font-size: 15px; line-height: 1.8; }
-        .about-logo { flex: 1; min-width: 250px; text-align: center; }
-        .about-logo img { max-width: 220px; height: auto; border-radius: 50%; border: 3px solid #d4af37; }
+        /* Customer Reviews */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .review-card { background: #141414; border: 1px solid #d4af37; border-radius: 8px; padding: 20px; text-align: center; font-style: italic; color: #ddd; }
 
-        footer { background-color: #000; color: #777; text-align: center; padding: 20px; margin-top: 50px; border-top: 1px solid #333; }
+        /* Newsletter & Footer */
+        .newsletter { text-align: center; margin: 40px 0; }
+        .newsletter input { padding: 12px; width: 280px; border-radius: 20px 0 0 20px; border: none; outline: none; }
+        .newsletter button { padding: 12px 25px; border-radius: 0 20px 20px 0; border: none; background: #d4af37; color: #000; font-weight: bold; cursor: pointer; }
+
+        footer { background-color: #050505; border-top: 1px solid #222; padding: 40px 20px 20px 20px; color: #aaa; }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+        .footer-col h3, .footer-col h4 { color: #fff; margin-bottom: 15px; }
+        .footer-col a { color: #aaa; text-decoration: none; display: block; margin-bottom: 8px; }
+        .footer-col a:hover { color: #d4af37; }
+        .copyright { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #1a1a1a; font-size: 13px; }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: white; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; }
     </style>
 </head>
 <body>
 
+<!-- Header -->
 <header>
-    <h1>👑 SK Royal Store</h1>
-    <p style="color: #ccc; margin-top: 5px;">Aap Ka Aatmad, Humari Pehchan</p>
+    <div class="logo-container">
+        <img src="logo.png" alt="SK Royal Store Logo" onerror="this.style.display='none'">
+        <div class="logo-text">
+            <h1>SK Royal Store</h1>
+            <p>Quality You Can Trust</p>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="Products.html">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <a href="Products.html" class="btn-order-now">Order Now</a>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="Products.html">All Products</a>
-</nav>
-
-<!-- 1. Banner Slider (4 Banners) -->
-<div class="slider-container">
-    <div class="slider">
-        <div class="slide"><img src="pink-black-fan-1.png" alt="Rechargeable Fans"></div>
-        <div class="slide"><img src="aircooler-black-1.png" alt="Mini Air Cooler"></div>
-        <div class="slide"><img src="powerbank-1.png" alt="High Speed Powerbank"></div>
-        <div class="slide"><img src="digital-bottle-1.png" alt="Smart Bottles"></div>
-    </div>
+<!-- Announcement -->
+<div class="announcement">
+    Best Quality • Fast Delivery • Cash On Delivery
 </div>
 
-<!-- 2. 4 Qualities / Features -->
-<div class="features">
-    <div class="feature-card">
-        <h3>🚚 Free Delivery</h3>
-        <p>Tamam products par nationwide free delivery</p>
-    </div>
-    <div class="feature-card">
-        <h3>💵 Cash on Delivery</h3>
-        <p>Pehle saman dekhein, phir payment karein</p>
-    </div>
-    <div class="feature-card">
-        <h3>⭐ Top Quality</h3>
-        <p>100% genuine aur aala quality items</p>
-    </div>
-    <div class="feature-card">
-        <h3>💬 24/7 Support</h3>
-        <p>WhatsApp par fawri rehnumai aur madad</p>
-    </div>
+<!-- Main Banner -->
+<div class="hero-banner">
+    <img src="aircooler-black-1.png" alt="Mini Air Cooler Banner">
 </div>
 
-<!-- 3. 8 Products Grid -->
+<!-- Products Section -->
 <div class="container">
-    <h2 class="section-title">🔥 Featured Products</h2>
+    <h2 class="section-title">Our Featured Products</h2>
     <div class="product-grid">
 
         <div class="product-card">
-            <img src="powerbank-1.png" alt="Powerbank">
-            <h3>High Speed Powerbank</h3>
-            <p class="price">Rs. 2,200</p>
-            <a href="powerbank.html" class="btn-sm">View Details</a>
+            <img src="green-fan-1.png" alt="Mini Foldable Fan (Green)">
+            <div class="product-title">Mini Foldable Fan (Green)</div>
+            <div class="price">Rs. 1,850</div>
+            <a href="green-fan.html" class="btn-details">View Details</a>
         </div>
 
         <div class="product-card">
-            <img src="pink-black-fan-1.png" alt="Pink Black Fan">
-            <h3>Pink & Black Fan</h3>
-            <p class="price">Rs. 1,950</p>
-            <a href="pink-black-fan.html" class="btn-sm">View Details</a>
+            <img src="sky-blue-fan-1.png" alt="Mini Foldable Fan (Sky Blue)">
+            <div class="product-title">Mini Foldable Fan (Sky Blue)</div>
+            <div class="price">Rs. 1,850</div>
+            <a href="sky-blue-fan.html" class="btn-details">View Details</a>
         </div>
 
         <div class="product-card">
-            <img src="sky-blue-fan-1.png" alt="Sky Blue Fan">
-            <h3>Sky Blue Mini Fan</h3>
-            <p class="price">Rs. 1,850</p>
-            <a href="sky-blue-fan.html" class="btn-sm">View Details</a>
+            <img src="pink-black-fan-1.png" alt="Mini Foldable Fan (Pink Black)">
+            <div class="product-title">Mini Foldable Fan (Pink Black)</div>
+            <div class="price">Rs. 1,950</div>
+            <a href="pink-black-fan.html" class="btn-details">View Details</a>
         </div>
 
         <div class="product-card">
-            <img src="green-fan-1.png" alt="Green Fan">
-            <h3>Green Portable Fan</h3>
-            <p class="price">Rs. 1,850</p>
-            <a href="green-fan.html" class="btn-sm">View Details</a>
-        </div>
-
-        <div class="product-card">
-            <img src="aircooler-black-1.png" alt="Air Cooler">
-            <h3>Black Air Cooler</h3>
-            <p class="price">Rs. 2,850</p>
-            <a href="aircooler-black.html" class="btn-sm">View Details</a>
-        </div>
-
-        <div class="product-card">
-            <img src="digital-bottle-1.png" alt="Digital Bottle">
-            <h3>Digital Temp Bottle</h3>
-            <p class="price">Rs. 1,450</p>
-            <a href="digital-bottle.html" class="btn-sm">View Details</a>
-        </div>
-
-        <div class="product-card">
-            <img src="steel-bottle-1.png" alt="Steel Bottle">
-            <h3>Steel Flask Bottle</h3>
-            <p class="price">Rs. 1,250</p>
-            <a href="steel-bottle.html" class="btn-sm">View Details</a>
-        </div>
-
-        <div class="product-card">
-            <img src="anellas-suit-1.png" alt="Anellas Suit">
-            <h3>Anellas Branded Suit</h3>
-            <p class="price">Rs. 3,450</p>
-            <a href="anellas-suit.html" class="btn-sm">View Details</a>
+            <img src="aircooler-black-1.png" alt="Mini Air Cooler">
+            <div class="product-title">Mini Air Cooler</div>
+            <div class="price">Rs. 2,850</div>
+            <a href="aircooler-black.html" class="btn-details">View Details</a>
         </div>
 
     </div>
 </div>
 
-<!-- 4. 4 Categories Grid -->
-<div class="container">
-    <h2 class="section-title">📂 Explore Categories</h2>
-    <div class="category-grid">
-        <div class="category-card">
-            <h3>🌀 Mini Fans</h3>
-            <p>Rechargeable & Portable Fans</p>
-            <a href="Products.html" class="btn-sm">Browse Fans</a>
-        </div>
-        <div class="category-card">
-            <h3>💧 Water Bottles</h3>
-            <p>Digital Temp & Steel Flasks</p>
-            <a href="Products.html" class="btn-sm">Browse Bottles</a>
-        </div>
-        <div class="category-card">
-            <h3>⚡ Powerbanks</h3>
-            <p>Fast Charging Powerbanks</p>
-            <a href="Products.html" class="btn-sm">Browse Powerbanks</a>
-        </div>
-        <div class="category-card">
-            <h3>👗 Branded Suits</h3>
-            <p>Ladies Printed & Embroidered Suits</p>
-            <a href="Products.html" class="btn-sm">Browse Suits</a>
-        </div>
-    </div>
-</div>
-
-<!-- 5. About Us Section with Logo -->
-<div class="container">
+<!-- About Section -->
+<div class="container" id="about">
     <div class="about-section">
-        <div class="about-text">
-            <h2>👑 About SK Royal Store</h2>
-            <p>SK Royal Store aap ke liye laya hai aala quality ke rechargeable fans, smart temperature bottles, fast-charging powerbanks, aur branded ladies suits. Humari pehli tarjeeh aap ko behtareen quality aur munassib qeemat mein products deliver karna hai.</p>
-        </div>
-        <div class="about-logo">
-            <img src="logo.png" alt="SK Royal Store Logo">
+        <div class="about-content">
+            <h2>About SK Royal Store</h2>
+            <h3 style="color: #d4af37; margin-bottom: 10px;">Pakistan's Trusted Online Store</h3>
+            <p>SK Royal Store provides quality products at affordable prices. We bring trending electronics, fashion and daily use products with easy shopping and reliable service.</p>
+            <p>Our mission is to provide customers with the best online shopping experience across Pakistan.</p>
         </div>
     </div>
 </div>
 
-<footer>
-    <p>&copy; 2026 SK Royal Store - All Rights Reserved</p>
+<!-- Customer Reviews -->
+<div class="container">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="reviews-grid">
+        <div class="review-card">
+            "Excellent product quality. Fast delivery and great service."
+        </div>
+        <div class="review-card">
+            "SK Royal Store has amazing products at reasonable prices."
+        </div>
+        <div class="review-card">
+            "Received my order on time. Highly recommended!"
+        </div>
+    </div>
+</div>
+
+<!-- Newsletter -->
+<div class="newsletter">
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+</div>
+
+<!-- Footer -->
+<footer id="contact">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h3>SK Royal Store</h3>
+            <p>Your Trusted Online Shopping Store In Pakistan.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p>📞 +92 308 6410774</p>
+            <p>✉️ skroyalstore@gmail.com</p>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2026 SK Royal Store. All Rights Reserved.
+    </div>
 </footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/923086410774" class="whatsapp-float" target="_blank">
+    💬 Order On WhatsApp
+</a>
 
 </body>
 </html>
