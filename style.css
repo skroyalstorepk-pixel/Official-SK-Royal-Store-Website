@@ -407,4 +407,25 @@ body {
     .hero-overlay h2 {
         font-size: 18px;
     }
+}.btn-group {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.detail-btn {
+    background: transparent;
+    color: #dfb253;
+    border: 1px solid #dfb253;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.detail-btn:hover {
+    background: #dfb253;
+    color: #000;
 }
