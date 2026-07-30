@@ -1,107 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact Us | SK Royal Store</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SK Royal Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; line-height: 1.6; }
+        
+        /* HEADER */
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #141414; border-bottom: 2px solid #dfb253; flex-wrap: wrap; gap: 15px; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 1px solid #dfb253; }
+        .logo h2 { color: #dfb253; font-size: 20px; font-weight: 700; }
+        .logo p { color: #aaa; font-size: 11px; }
+        
+        .nav-links a { color: #fff; text-decoration: none; margin: 0 12px; font-weight: 500; font-size: 14px; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #dfb253; }
+        
+        .order-btn { background: #dfb253; color: #000; padding: 8px 18px; border-radius: 5px; font-weight: 600; text-decoration: none; font-size: 14px; }
+        
+        /* PAGE TITLE */
+        .page-title { text-align: center; padding: 40px 20px; background: #111; border-bottom: 1px solid #222; }
+        .page-title h1 { color: #dfb253; font-size: 30px; margin-bottom: 5px; }
+        .page-title p { color: #aaa; font-size: 14px; }
+        
+        /* CONTACT CONTAINER */
+        .contact-container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        .contact-info, .contact-form-card { flex: 1; min-width: 300px; background: #141414; border: 1px solid #282828; padding: 30px; border-radius: 10px; }
+        
+        .contact-info h2, .contact-form-card h2 { color: #dfb253; font-size: 22px; margin-bottom: 15px; }
+        .contact-info p { color: #aaa; font-size: 14px; margin-bottom: 25px; }
+        
+        .info-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .info-icon { background: #1a1a1a; border: 1px solid #dfb253; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .info-item h4 { color: #fff; font-size: 15px; }
+        .info-item span { color: #bbb; font-size: 13px; }
+        
+        /* FORM STYLING */
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; color: #ccc; font-size: 13px; margin-bottom: 6px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; background: #080808; border: 1px solid #333; border-radius: 6px; color: #fff; font-size: 14px; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #dfb253; }
+        
+        .submit-btn { width: 100%; padding: 12px; background: #dfb253; color: #000; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; font-size: 15px; transition: 0.3s; }
+        .submit-btn:hover { background: #c99e42; }
+        
+        /* FOOTER */
+        .footer { background: #111; text-align: center; padding: 25px 20px; border-top: 1px solid #222; margin-top: 60px; color: #888; font-size: 13px; }
+        
+        /* WHATSAPP BUTTON */
+        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; padding: 12px 20px; border-radius: 50px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; }
+    </style>
 </head>
-
 <body>
 
-<header class="header">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <div>
+                <h2>SK Royal Store</h2>
+                <p>Quality You Can Trust</p>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="active">Contact Us</a>
+        </nav>
+        <a href="https://wa.me/923086410774" class="order-btn" target="_blank">Order Now</a>
+    </header>
 
-<div class="logo">
+    <!-- TITLE BANNER -->
+    <section class="page-title">
+        <h1>Contact Us</h1>
+        <p>We'd Love To Hear From You! Get In Touch With Us.</p>
+    </section>
 
-<img src="images/logo.png" alt="SK Royal Store Logo">
+    <!-- CONTACT SECTION -->
+    <section class="contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <p>Have questions about a product or your order? Reach out to us directly via WhatsApp, Email, or the form.</p>
+            
+            <div class="info-item">
+                <div class="info-icon">📱</div>
+                <div>
+                    <h4>WhatsApp / Phone</h4>
+                    <span>+92 308 6410774</span>
+                </div>
+            </div>
 
-<div class="logo-text">
-<h2>SK Royal Store</h2>
-<p>Premium Shopping Experience</p>
-</div>
+            <div class="info-item">
+                <div class="info-icon">📧</div>
+                <div>
+                    <h4>Email Address</h4>
+                    <span>skroyalstore.pk@gmail.com</span>
+                </div>
+            </div>
 
-</div>
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div>
+                    <h4>Location</h4>
+                    <span>Lahore, Pakistan</span>
+                </div>
+            </div>
+        </div>
 
-<nav class="navbar">
-<a href="index.html">Home</a>
-<a href="Products.html">Products</a>
-<a href="about.html">About Us</a>
-<a href="contact.html">Contact Us</a>
-</nav>
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+            <h2>Send Us A Message</h2>
+            <form>
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="4" placeholder="Write your message here..."></textarea>
+                </div>
+                <button type="button" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-<a href="https://wa.me/923086410774" class="order-btn">
-Order Now
-</a>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 SK Royal Store | All Rights Reserved.</p>
+    </footer>
 
-</header>
-
-<section class="contact-hero">
-
-<h1>Contact Us</h1>
-
-<p>We'd Love To Hear From You</p>
-
-</section>
-
-<section class="contact-container">
-
-<div class="contact-info">
-
-<h2>Get In Touch</h2>
-
-<p><strong>📱 WhatsApp:</strong> +92 308 6410774</p>
-
-<p><strong>📧 Email:</strong> skroyalstore.pk@gmail.com</p>
-
-<p><strong>📍 Location:</strong> Pakistan</p>
-
-<p><strong>🕒 Business Hours:</strong> Monday - Saturday | 9:00 AM - 8:00 PM</p>
-
-</div>
-
-<div class="contact-form">
-
-<h2>Send Us A Message</h2><form action="https://api.web3forms.com/submit" method="POST">
-
-<input type="hidden" name="access_key" value="f2805ff7-53b5-444c-ac63-2a6e5702e00d">
-
-<input type="hidden" name="subject" value="New Message From SK Royal Store Website">
-
-<input type="hidden" name="redirect" value="https://skroyalstorepk7.github.io/Official-SK-Royal-Store-Website/thankyou.html">
-<input type="hidden" name="from_name" value="SK Royal Store Website">
-<input type="text" name="name" placeholder="Your Name" required>
-
-<input type="email" name="email" placeholder="Your Email" required>
-
-<input type="text" name="subject_text" placeholder="Subject">
-
-<textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-
-<button type="submit" class="send-btn">
-Send Message
-</button>
-
-</form>
-
-</div>
-
-</section>
-
-<footer class="simple-footer">
-<p>© 2026 SK Royal Store | All Rights Reserved.</p>
-</footer>
-
-<script src="script.js"></script>
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/923086410774" class="whatsapp-btn" target="_blank">💬 Order On WhatsApp</a>
 
 </body>
-
 </html>
