@@ -1,89 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Thank You | SK Royal Store</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:#111;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-}
-
-.thankyou-box{
-width:90%;
-max-width:600px;
-background:#1b1b1b;
-padding:50px;
-border-radius:20px;
-text-align:center;
-border:2px solid #D4AF37;
-box-shadow:0 0 30px rgba(212,175,55,.3);
-}
-
-.thankyou-box h1{
-font-size:50px;
-color:#D4AF37;
-margin-bottom:20px;
-}
-
-.thankyou-box p{
-color:#fff;
-font-size:20px;
-line-height:1.8;
-margin-bottom:15px;
-}
-
-.home-btn{
-display:inline-block;
-margin-top:25px;
-padding:15px 35px;
-background:#D4AF37;
-color:#111;
-text-decoration:none;
-font-weight:600;
-border-radius:10px;
-transition:.3s;
-}
-
-.home-btn:hover{
-background:#fff;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | SK Royal Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #0c0c0c; color: #ffffff; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+        
+        .thankyou-card { background: #121212; border: 1px solid #d4af37; border-radius: 16px; padding: 50px 40px; text-align: center; max-width: 550px; width: 100%; box-shadow: 0 0 25px rgba(212, 175, 55, 0.15); }
+        .party-icon { font-size: 50px; margin-bottom: 15px; display: inline-block; }
+        .thankyou-card h1 { color: #d4af37; font-size: 36px; font-weight: 700; margin-bottom: 15px; }
+        .thankyou-card p { color: #e0e0e0; font-size: 16px; margin-bottom: 10px; line-height: 1.6; }
+        
+        .back-btn { display: inline-block; margin-top: 25px; background: #d4af37; color: #000; padding: 12px 30px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px; transition: 0.3s; }
+        .back-btn:hover { background: #b8952e; }
+    </style>
 </head>
-
 <body>
 
-<div class="thankyou-box">
-
-<h1>🎉 Thank You!</h1>
-
-<p>Your message has been sent successfully.</p>
-
-<p>Our team will contact you as soon as possible.</p>
-
-<a href="index.html" class="home-btn">Back To Home</a>
-
-</div>
+    <div class="thankyou-card">
+        <span class="party-icon">🎉</span>
+        <h1>Thank You!</h1>
+        <p>Your message has been sent successfully.</p>
+        <p>Our team will contact you as soon as possible.</p>
+        <a href="index.html" class="back-btn">Back To Home</a>
+    </div>
 
 </body>
-
 </html>
