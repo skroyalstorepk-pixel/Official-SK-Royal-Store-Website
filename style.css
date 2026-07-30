@@ -1212,4 +1212,302 @@ text-align:center;
 .hero-image img{
 width:420px;
 max-width:100%;
+}/* =========================
+   SK ROYAL STORE CSS PART 5
+========================= */
+
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin:50px 0 30px;
+    color:#d4af37;
+}
+
+
+
+/* PRODUCT GRID */
+
+.product-grid,
+.category-grid,
+.review-grid,
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:20px;
+}
+
+
+
+.product-card,
+.category-card,
+.review-card,
+.feature-box{
+    background:#111;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 0 15px rgba(212,175,55,0.25);
+    transition:0.3s;
+}
+
+
+.product-card:hover,
+.category-card:hover,
+.review-card:hover,
+.feature-box:hover{
+    transform:translateY(-8px);
+}
+
+
+
+/* PRODUCT IMAGES */
+
+.product-card img,
+.category-card img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+    border-radius:10px;
+}
+
+
+
+/* HEADINGS */
+
+.product-card h3,
+.category-card h3,
+.feature-box h3,
+.review-card h3{
+    color:#d4af37;
+    margin:15px 0;
+}
+
+
+
+/* TEXT */
+
+.product-card p,
+.feature-box p,
+.review-card p,
+.about-text p{
+    color:#ddd;
+    line-height:1.6;
+}
+
+
+
+/* GOLD BUTTON */
+
+.gold-btn{
+
+    display:inline-block;
+    background:#d4af37;
+    color:#000;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:15px;
+    transition:0.3s;
+
+}
+
+
+.gold-btn:hover{
+
+    background:white;
+}
+
+
+
+/* WHY US */
+
+.why-us,
+.categories,
+.featured,
+.reviews,
+.about,
+.contact,
+.newsletter{
+
+    padding:40px 5%;
+    background:#050505;
+
+}
+
+
+
+/* ABOUT SECTION */
+
+.about-content{
+
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+
+}
+
+
+.about-text{
+
+    flex:1;
+
+}
+
+
+.about-image{
+
+    flex:1;
+
+}
+
+
+.about-image img{
+
+    width:100%;
+    border-radius:20px;
+
+}
+
+
+
+/* CONTACT */
+
+.contact-box{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    text-align:center;
+
+}
+
+
+.contact-box div{
+
+    background:#111;
+    padding:20px;
+    border-radius:15px;
+
+}
+
+
+
+/* NEWSLETTER */
+
+.newsletter{
+
+    text-align:center;
+
+}
+
+
+.subscribe-box{
+
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+
+}
+
+
+.subscribe-box input{
+
+    padding:15px;
+    width:280px;
+    border-radius:30px;
+    border:none;
+
+}
+
+
+
+/* FOOTER */
+
+.footer{
+
+    background:#000;
+    color:white;
+    padding:40px 5%;
+
+}
+
+
+.footer-content{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+
+}
+
+
+.footer a{
+
+    display:block;
+    color:#ddd;
+    text-decoration:none;
+    margin:10px 0;
+
+}
+
+
+.footer a:hover{
+
+    color:#d4af37;
+
+}
+
+
+.copyright{
+
+    text-align:center;
+    margin-top:30px;
+    border-top:1px solid #333;
+    padding-top:20px;
+
+}
+
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    background:#25D366;
+    color:white;
+    padding:15px 25px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 5px 20px #000;
+
+}
+
+
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+.section-title{
+    font-size:25px;
+}
+
+
+.product-card img,
+.category-card img{
+    height:180px;
+}
+
+
 }
