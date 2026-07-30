@@ -1,263 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK Royal Store | Quality You Can Trust</title>
-    <meta name="description" content="SK Royal Store - Premium Products in Pakistan">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>SK Royal Store - Home</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
+        nav { background-color: #34495e; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .hero { background: #16a085; color: white; padding: 50px 20px; text-align: center; }
+        .hero h1 { margin: 0 0 10px 0; }
+        .hero-btn { background: #e67e22; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-size: 18px; font-weight: bold; display: inline-block; margin-top: 15px; }
+        .container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
+        .section-title { text-align: center; margin-bottom: 20px; color: #2c3e50; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .product-card { background: white; border-radius: 8px; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .product-card img { max-width: 100%; height: 180px; object-fit: contain; border-radius: 5px; }
+        .product-card h3 { font-size: 16px; margin: 10px 0 5px 0; }
+        .price { color: #e74c3c; font-weight: bold; font-size: 18px; margin-bottom: 12px; }
+        .btn-link { background: #27ae60; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; display: inline-block; font-weight: bold; }
+        footer { background-color: #2c3e50; color: white; text-align: center; padding: 15px; margin-top: 30px; }
+    </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo">
-            <img src="logo.png" alt="SK Royal Store Logo">
-            <div>
-                <h2>SK Royal Store</h2>
-                <p>Quality You Can Trust</p>
-            </div>
+<header>
+    <h1>👑 SK Royal Store</h1>
+    <p>Aap Ka Aatmad, Humari Pehchan</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="product.html">All Products</a>
+</nav>
+
+<div class="hero">
+    <h1>KhushAamdeed SK Royal Store Par!</h1>
+    <p>Aala quality fans, bottles, powerbanks aur branded suits behtareen qeemat mein hasil karein.</p>
+    <a href="product.html" class="hero-btn">🛒 Shop All Products</a>
+</div>
+
+<div class="container">
+    <h2 class="section-title">🌟 Featured Products</h2>
+    <div class="product-grid">
+
+        <!-- Pink Fan -->
+        <div class="product-card">
+            <img src="pink-black-fan-1.png" alt="Pink Black Fan">
+            <h3>Pink & Black Fan</h3>
+            <p class="price">Rs. 1,950</p>
+            <a href="pink-black-fan.html" class="btn-link">View Details</a>
         </div>
 
-        <nav class="navbar nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="Products.html">Products</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-        <a href="https://wa.me/923086410774" class="order-btn" target="_blank">Order Now</a>
-    </header>
-
-    <!-- HERO SLIDER -->
-    <section class="hero-slider">
-        <div class="slides">
-            <img src="banner1.png" class="slide active" alt="Banner 1">
-            <img src="banner2.png" class="slide" alt="Banner 2">
-            <img src="banner3.png" class="slide" alt="Banner 3">
-            <img src="banner4.png" class="slide" alt="Banner 4">
-            <img src="banner5.png" class="slide" alt="Banner 5">
+        <!-- Air Cooler Blue -->
+        <div class="product-card">
+            <img src="aircooler-blue-1.png" alt="Air Cooler">
+            <h3>Air Cooler Blue</h3>
+            <p class="price">Rs. 2,850</p>
+            <a href="aircooler-blue.html" class="btn-link">View Details</a>
         </div>
-    </section>
 
-    <!-- FEATURES -->
-    <section class="features">
-        <div class="feature-box">
-            <h3>🚚 Fast Delivery</h3>
-            <p>Delivery Available All Over Pakistan</p>
+        <!-- Digital Bottle -->
+        <div class="product-card">
+            <img src="digital-bottle-1.png" alt="Digital Bottle">
+            <h3>Digital Bottle</h3>
+            <p class="price">Rs. 1,450</p>
+            <a href="digital-bottle.html" class="btn-link">View Details</a>
         </div>
-        <div class="feature-box">
-            <h3>💵 Cash On Delivery</h3>
-            <p>Pay When You Receive Your Order</p>
+
+        <!-- Powerbank -->
+        <div class="product-card">
+            <img src="powerbank-1.png" alt="Powerbank">
+            <h3>Fast Powerbank</h3>
+            <p class="price">Rs. 2,200</p>
+            <a href="powerbank.html" class="btn-link">View Details</a>
         </div>
-        <div class="feature-box">
-            <h3>⭐ Premium Quality</h3>
-            <p>Only Quality Products</p>
-        </div>
-        <div class="feature-box">
-            <h3>📱 WhatsApp Support</h3>
-            <p>Quick Customer Support</p>
-        </div>
-    </section>
 
-    <!-- FEATURED PRODUCTS (8 PRODUCTS WITH DETAILS BUTTON) -->
-    <section class="featured">
-        <h2 class="section-title">Featured Products</h2>
-        <div class="product-grid">
-            
-            <!-- Product 1 -->
-            <div class="product-card">
-                <img src="green-fan-1.png" alt="Mini Foldable Fan">
-                <h3>Mini Foldable Fan</h3>
-                <p>Portable • Rechargeable • Foldable</p>
-                <div class="btn-group">
-                    <a href="green-fan.html" class="detail-btn">View Details</a>
-                    <a href="https://wa.me/923086410774?text=I%20want%20to%20order%20Mini%20Foldable%20Fan" class="gold-btn" target="_blank">WhatsApp Order</a>
-                </div>
-            </div>
+    </div>
+</div>
 
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="aircooler-blue-1.png" alt="Mini Air Cooler">
-                <h3>Mini Air Cooler</h3>
-                <p>Cool Air • USB Powered • Portable</p>
-                <div class="btn-group">
-                    <a href="aircooler.html" class="detail-btn">View Details</a>
-                    <a href="https://wa.me/923086410774?text=I%20want%20to%20order%20Mini%20Air%20Cooler" class="gold-btn" target="_blank">WhatsApp Order</a>
-                </div>
-            </div>
+<footer>
+    <p>&copy; 2026 SK Royal Store - All Rights Reserved</p>
+</footer>
 
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="powerbank-1.png" alt="Fast Charging Power Bank">
-                <h3>Power Bank</h3>
-                <p>High Capacity • Fast Charging</p>
-                <div class="btn-group">
-                    <a href="powerbank.html" class="detail-btn">View Details</a>
-                    <a href="https://wa.me/923086410774?text=I%20want%20to%20order%20Power%20Bank" class="gold-btn" target="_blank">WhatsApp Order</a>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <img src="digital-bottle-1.png" alt="Digital Temperature Bottle">
-                <h3>Digital Bottle</h3>
-                <p>Temperature Display • Premium Quality</p>
-                <div class="btn-group">
-                    <a href="digital-bottle.html" class="detail-btn">View Details</a>
-                    <a href="https://wa.me/923086410774?text=I%20want%20to%20order%20Digital%20Bottle" class="gold-btn" target="_blank">WhatsApp Order</a>
-                </div>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="product-card">
-                <img src="sky-blue-fan-1.png" alt="Portable AC/DC Fan">
-                <h3>Portable Sky Blue Fan</h3>
-                <p>Rechargeable • Powerful Airflow</p>
-                <div class="btn-group">
-                    <a href="sky-blue-fan.html" class="detail-btn">View Details</a>
-                    <a href="https://wa.me/923086410774?text=I%20want%20to%20order%20Sky%20Blue%20Fan" class="gold-btn" target="_blank">WhatsApp Order</a>
-                </div>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="product-card">
-                <img src="steel-bottle-1.png" alt="Stainless Steel Bottle">
-                <h3>Steel Bottle</h3>
-                <p>Insulated • Hot & Cold • Durable</p>
-                <div class="btn-group">
-                    <a href="steel-bottle.html" class="detail-btn">View Details</a>
-                    <a href="https://wa.me/923086410774?text=I%20want%20to%20order%20Steel%20Bottle" class="gold-btn" target="_blank">WhatsApp Order</a>
-                </div>
-            </div>
-
-            <!-- Product 7 -->
-            <div class="product-card">
-                <img src="pink-black-fan-1.png" alt="Desktop Mini Fan">
-                <h3>Pink Black Mini Fan</h3>
-                <p>Stylish • USB Battery Fan</p>
-                <div class="btn-group">
-                    <a href="pink-black-fan.html" class="detail-btn">View Details</a>
-                    <a href="https://wa.me/923086410774?text=I%20want%20to%20order%20Pink%20Black%20Fan" class="gold-btn" target="_blank">WhatsApp Order</a>
-                </div>
-            </div>
-
-            <!-- Product 8 -->
-            <div class="product-card">
-                <img src="baroque-suit-1.png" alt="Designer Ladies Suit">
-                <h3>Baroque Designer Suit</h3>
-                <p>Premium Fabric • Unstitched Suit</p>
-                <div class="btn-group">
-                    <a href="baroque-suit.html" class="detail-btn">View Details</a>
-                    <a href="https://wa.me/923086410774?text=I%20want%20to%20order%20Baroque%20Suit" class="gold-btn" target="_blank">WhatsApp Order</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SHOP BY CATEGORY -->
-    <section class="categories">
-        <h2 class="section-title">Shop By Category</h2>
-        <div class="category-grid">
-            <div class="category-card">
-                <img src="aircooler-blue-1.png" alt="Electronics">
-                <h3>Electronics</h3>
-                <a href="Products.html" class="gold-btn">Explore</a>
-            </div>
-            <div class="category-card">
-                <img src="steel-bottle-1.png" alt="Home Products">
-                <h3>Home Products</h3>
-                <a href="Products.html" class="gold-btn">Explore</a>
-            </div>
-            <div class="category-card">
-                <img src="baroque-suit-1.png" alt="Fashion">
-                <h3>Fashion</h3>
-                <a href="Products.html" class="gold-btn">Explore</a>
-            </div>
-            <div class="category-card">
-                <img src="digital-bottle-1.png" alt="Accessories">
-                <h3>Accessories</h3>
-                <a href="Products.html" class="gold-btn">Explore</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION WITH BANNER FIX -->
-    <section class="about">
-        <h2 class="section-title">About SK Royal Store</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Pakistan's Trusted Online Store</h3>
-                <p>SK Royal Store provides quality products at affordable prices. We bring trending electronics, fashion and daily use products with easy shopping and reliable service.</p>
-                <p>Our mission is to provide customers with the best online shopping experience across Pakistan.</p>
-            </div>
-            <div class="about-image">
-                <img src="logo.png" alt="SK Royal Store logo">
-            </div>
-        </div>
-    </section>
-
-    <!-- CUSTOMER REVIEWS -->
-    <section class="reviews">
-        <h2 class="section-title">Customer Reviews</h2>
-        <div class="review-grid">
-            <div class="review-card">
-                <p>"Excellent product quality. Fast delivery and great service."</p>
-                <h3>- Ali Khan</h3>
-            </div>
-            <div class="review-card">
-                <p>"SK Royal Store has amazing products at reasonable prices."</p>
-                <h3>- Ahmed Raza</h3>
-            </div>
-            <div class="review-card">
-                <p>"Received my order safely. Highly recommended."</p>
-                <h3>- Muhammad Usman</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEWSLETTER -->
-    <section class="newsletter">
-        <h2>Stay Updated With SK Royal Store</h2>
-        <p>Subscribe for new products and special offers.</p>
-        <div class="subscribe-box">
-            <input type="email" placeholder="Enter Your Email">
-            <button class="gold-btn">Subscribe</button>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <h3>SK Royal Store</h3>
-                <p>Your Trusted Online Shopping Store In Pakistan.</p>
-            </div>
-            <div>
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <a href="Products.html">Products</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div>
-                <h3>Contact Us</h3>
-                <p>📱 +92 308 6410774</p>
-                <p>📧 skroyalstore.pk@gmail.com</p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>© 2026 SK Royal Store. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- WHATSAPP BUTTON -->
-    <a href="https://wa.me/923086410774" class="whatsapp-btn" target="_blank">💬 Order On WhatsApp</a>
-
-    <script src="script.js"></script>
 </body>
 </html>
