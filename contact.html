@@ -79,7 +79,35 @@
         <!-- RIGHT FORM BOX (Action Redirects to thank-you page) -->
         <div class="form-box">
             <h2>Send Us a Message</h2>
-            <form action="thankyou.html" method="GET">
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="f2805ff7-53b5-444c-ac63-2a6e5702e00d">
+
+    <input type="hidden" name="subject" value="New Contact Form - SK Royal Store">
+
+    <input type="hidden" name="redirect" value="https://skroyalstorepk-pixel.github.io/Official-SK-Royal-Store-Website/thankyou.html">
+
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+
+    <div class="form-group">
+        <input type="text" name="subject" placeholder="Subject" required>
+    </div>
+
+    <div class="form-group">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    </div>
+
+    <button type="submit" class="send-btn">
+        Send Message
+    </button>
+
+</form>
                 <div class="form-group">
                     <input type="text" placeholder="Your Name" required>
                 </div>
