@@ -1,10 +1,9 @@
-/* ======================================
-   SK ROYAL STORE
-   PREMIUM CSS PART 1
-====================================== */
+/*======================================
+ SK ROYAL STORE - STYLE.CSS
+ PART 1
+======================================*/
 
-
-/* ===== RESET ===== */
+/* RESET */
 
 *{
     margin:0;
@@ -13,1041 +12,1027 @@
     font-family:'Poppins',sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     background:#0b0b0b;
-    color:white;
+    color:#ffffff;
     line-height:1.6;
+    overflow-x:hidden;
 }
-
 
 img{
     max-width:100%;
     display:block;
 }
 
-
 a{
     text-decoration:none;
+    color:inherit;
 }
 
+ul{
+    list-style:none;
+}
 
-/* ===== HEADER ===== */
+button{
+    cursor:pointer;
+    border:none;
+}
 
+/* ===========================
+HEADER
+=========================== */
 
 .header{
-
+    width:100%;
     background:#111;
-    padding:15px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
     border-bottom:2px solid #D4AF37;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 6%;
     position:sticky;
     top:0;
     z-index:999;
-
 }
 
-
-
 .logo{
-
     display:flex;
     align-items:center;
     gap:15px;
-
 }
 
-
 .logo img{
-
     width:65px;
     height:65px;
     border-radius:50%;
     object-fit:cover;
-
+    border:2px solid #D4AF37;
 }
-
 
 .logo h2{
-
     color:#D4AF37;
     font-size:28px;
-
+    font-weight:700;
 }
-
 
 .logo p{
-
-    color:#ccc;
+    color:#bbbbbb;
     font-size:14px;
-
 }
 
-
-
-/* NAVBAR */
-
+/* ===========================
+NAVBAR
+=========================== */
 
 .navbar{
-
     display:flex;
     gap:30px;
-
 }
-
 
 .navbar a{
-
-    color:white;
+    color:#fff;
+    font-size:16px;
     font-weight:600;
     transition:.3s;
-
+    position:relative;
 }
-
 
 .navbar a:hover,
 .navbar .active{
-
     color:#D4AF37;
-
 }
 
+.navbar a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#D4AF37;
+    transition:.3s;
+}
 
+.navbar a:hover::after,
+.navbar .active::after{
+    width:100%;
+}
 
-/* BUTTONS */
-
+/* ===========================
+BUTTONS
+=========================== */
 
 .order-btn,
 .gold-btn{
-
     display:inline-block;
     background:#D4AF37;
     color:#111;
-    padding:12px 25px;
+    padding:12px 28px;
     border-radius:8px;
-    font-weight:bold;
+    font-weight:700;
     transition:.3s;
-
 }
-
 
 .order-btn:hover,
 .gold-btn:hover{
-
-    background:white;
-
+    background:#ffffff;
+    transform:translateY(-3px);
 }
-
 
 .dark-btn{
-
     display:inline-block;
-    background:#111;
-    color:#D4AF37;
+    padding:12px 28px;
     border:2px solid #D4AF37;
-    padding:12px 25px;
+    color:#D4AF37;
     border-radius:8px;
+    transition:.3s;
 }
 
+.dark-btn:hover{
+    background:#D4AF37;
+    color:#111;
+}
 
-
-/* ======================================
-   HOME HERO SLIDER
-====================================== */
-
+/* ===========================
+HERO SLIDER
+=========================== */
 
 .hero-slider{
-
     width:100%;
-    height:600px;
+    height:650px;
     position:relative;
     overflow:hidden;
-
 }
-
 
 .slides{
-
     width:100%;
     height:100%;
-
 }
 
-
 .slide{
-
     width:100%;
     height:100%;
     object-fit:cover;
     display:none;
-
 }
-
 
 .slide.active{
-
     display:block;
-
 }
 
-
-
 .hero-overlay{
-
     position:absolute;
     top:50%;
     left:8%;
     transform:translateY(-50%);
-
+    max-width:600px;
 }
-
-
 
 .hero-overlay h1{
-
-    font-size:60px;
     color:#D4AF37;
-
+    font-size:60px;
+    margin-bottom:10px;
 }
-
 
 .hero-overlay h2{
-
-    font-size:35px;
-    color:white;
-
+    font-size:34px;
+    margin-bottom:15px;
 }
-
 
 .hero-overlay p{
-
     color:#ddd;
     font-size:18px;
-    margin:20px 0;
-
+    margin-bottom:30px;
 }
-
 
 .hero-buttons{
-
     display:flex;
     gap:15px;
-
+    flex-wrap:wrap;
 }
 
-
-
-/* ======================================
-   FEATURES
-====================================== */
-
+/* ===========================
+FEATURES
+=========================== */
 
 .features{
-
     width:90%;
-    margin:50px auto;
+    margin:70px auto;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:25px;
-
 }
-
 
 .feature-box{
-
     background:#161616;
     border:2px solid #D4AF37;
-    padding:25px;
-    text-align:center;
     border-radius:15px;
-
+    padding:30px 20px;
+    text-align:center;
+    transition:.3s;
 }
 
+.feature-box:hover{
+    transform:translateY(-8px);
+}
 
 .feature-box h3{
-
     color:#D4AF37;
-    margin-bottom:10px;
-
+    margin-bottom:12px;
+    font-size:22px;
 }
-
 
 .feature-box p{
-
     color:#ddd;
-
 }
 
-
-
-/* ======================================
-   SECTION TITLE
-====================================== */
-
+/* ===========================
+SECTION TITLE
+=========================== */
 
 .section-title{
-
     text-align:center;
     color:#D4AF37;
-    font-size:38px;
-    margin:40px 0;
-
+    font-size:42px;
+    margin:60px 0 35px;
 }
 
-
-
-/* ======================================
-   PRODUCT CARDS
-====================================== */
-
+/* ===========================
+PRODUCT GRID
+=========================== */
 
 .product-grid{
-
     width:90%;
     margin:auto;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:25px;
-
+    padding-bottom:30px;
 }
 
-
-
 .product-card{
-
     background:#161616;
     border:2px solid #D4AF37;
     border-radius:15px;
-    padding:15px;
+    padding:18px;
     text-align:center;
-
+    transition:.3s;
 }
 
-
+.product-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(212,175,55,.25);
+}
 
 .product-card img{
-
     width:100%;
-    height:220px;
+    height:230px;
     object-fit:contain;
-    background:white;
+    background:#ffffff;
     border-radius:10px;
-
 }
-
-
 
 .product-card h3{
-
     color:#D4AF37;
-    margin-top:15px;
-
+    margin-top:18px;
+    font-size:22px;
 }
-
-
 
 .product-card p{
-
-    color:#ddd;
-
+    color:#dddddd;
+    margin-top:8px;
 }
 
-
-
 .price{
-
     display:block;
-    color:white;
-    font-size:24px;
-    font-weight:bold;
-    margin:15px 0;
+    color:#ffffff;
+    font-size:26px;
+    font-weight:700;
+    margin:18px 0;
+}/*======================================
+ SK ROYAL STORE - STYLE.CSS
+ PART 2A
+======================================*/
 
-}/* ======================================
-   SK ROYAL STORE
-   PREMIUM CSS PART 2
-====================================== */
+/* ===========================
+PAGE BANNER
+=========================== */
 
+.page-banner{
+    width:100%;
+    background:#111;
+    padding:70px 20px;
+    text-align:center;
+    border-bottom:2px solid #D4AF37;
+}
 
-/* ======================================
-   PRODUCT DETAIL PAGE
-====================================== */
+.page-banner h1{
+    font-size:48px;
+    color:#D4AF37;
+    margin-bottom:15px;
+}
 
+.page-banner p{
+    color:#dddddd;
+    font-size:18px;
+}
+
+/* ===========================
+SEARCH SECTION
+=========================== */
+
+.search-section{
+    width:90%;
+    margin:40px auto 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.search-section input{
+    width:100%;
+    max-width:600px;
+    padding:15px 20px;
+    border:2px solid #D4AF37;
+    border-radius:10px;
+    background:#161616;
+    color:#fff;
+    font-size:16px;
+    outline:none;
+}
+
+.search-section input::placeholder{
+    color:#999;
+}
+
+/* ===========================
+CATEGORY BUTTONS
+=========================== */
+
+.categories{
+    width:90%;
+    margin:20px auto 50px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.categories button{
+    background:#161616;
+    color:#D4AF37;
+    border:2px solid #D4AF37;
+    padding:12px 25px;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.categories button:hover{
+    background:#D4AF37;
+    color:#111;
+}
+
+/* ===========================
+PRODUCTS GRID PAGE
+=========================== */
+
+.products-grid{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    padding-bottom:60px;
+}
+
+/* ===========================
+PRODUCT DETAIL
+=========================== */
 
 .product-detail{
-
     width:90%;
     margin:60px auto;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:50px;
-
 }
-
 
 .product-images img{
-
     width:100%;
-    background:white;
-    padding:20px;
+    background:#fff;
     border-radius:15px;
-
+    padding:20px;
 }
 
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:20px;
+}
 
+.gallery img{
+    height:90px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:10px;
+    padding:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    border:2px solid #D4AF37;
+}
 
 .product-info h1{
-
     color:#D4AF37;
     font-size:42px;
     margin-bottom:15px;
-
 }
 
-
+.product-info .price{
+    font-size:32px;
+    color:#fff;
+    margin-bottom:20px;
+}
 
 .product-info p{
-
     color:#ddd;
-    font-size:17px;
-    margin:15px 0;
-
+    margin-bottom:18px;
+    line-height:1.8;
 }
 
-
-
-.features{
-
-    margin-top:25px;
-
+.rating{
+    color:#FFD700;
+    font-size:20px;
+    margin-bottom:20px;
 }
 
-
-
-.features h2{
-
-    color:#D4AF37;
-
+.product-info ul{
+    margin:20px 0;
+    padding-left:20px;
 }
 
-
-
-.features li{
-
+.product-info ul li{
     color:#ddd;
-    margin:8px 0;
+    margin-bottom:10px;
+}/*======================================
+ SK ROYAL STORE - STYLE.CSS
+ PART 2B
+======================================*/
 
-}
-
-
-
-/* ======================================
-   PAGE BANNER
-====================================== */
-
-
-.page-banner{
-
-    text-align:center;
-    padding:60px 20px;
-    background:#151515;
-    border-bottom:2px solid #D4AF37;
-
-}
-
-
-.page-banner h1{
-
-    color:#D4AF37;
-    font-size:48px;
-
-}
-
-
-.page-banner p{
-
-    color:#ddd;
-}
-
-
-
-/* ======================================
-   ABOUT PAGE
-====================================== */
-
+/* ===========================
+ABOUT PAGE
+=========================== */
 
 .about-section{
-
     width:90%;
     margin:60px auto;
     background:#161616;
-    padding:40px;
     border:2px solid #D4AF37;
     border-radius:15px;
-
+    padding:40px;
 }
-
-
 
 .about-section h2{
-
     color:#D4AF37;
+    font-size:36px;
     margin-bottom:20px;
-
 }
-
-
 
 .about-section p{
-
-    color:#ddd;
-    line-height:30px;
-
+    color:#dddddd;
+    line-height:1.9;
+    margin-bottom:18px;
 }
 
-
-
-/* ======================================
-   CONTACT PAGE
-====================================== */
-
-
-.contact-section{
-
-    width:90%;
-    margin:60px auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-
-}
-
-
-
-.contact-box{
-
-    background:#161616;
-    padding:30px;
-    border:2px solid #D4AF37;
-    border-radius:15px;
-
-}
-
-
-
-.contact-box h2{
-
-    color:#D4AF37;
-
-}
-
-
-
-.contact-box input,
-.contact-box textarea{
-
-    width:100%;
-    padding:15px;
-    margin:10px 0;
-    background:#111;
-    border:2px solid #333;
-    color:white;
-    border-radius:8px;
-
-}
-
-
-
-.contact-box textarea{
-
-    height:150px;
-    resize:none;
-
-}
-
-
-
-/* ======================================
-   WHY CHOOSE SECTION
-====================================== */
-
+/* ===========================
+WHY CHOOSE US
+=========================== */
 
 .why-choose{
-
     width:90%;
     margin:60px auto;
-
 }
 
-
-
 .why-grid{
-
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:25px;
-
 }
-
-
 
 .why-card{
-
     background:#161616;
     border:2px solid #D4AF37;
-    padding:25px;
     border-radius:15px;
-
+    padding:30px 20px;
+    text-align:center;
+    transition:.3s;
 }
 
-
+.why-card:hover{
+    transform:translateY(-8px);
+}
 
 .why-card h3{
-
     color:#D4AF37;
-
+    margin-bottom:12px;
 }
-
-
 
 .why-card p{
-
     color:#ddd;
-
 }
 
+/* ===========================
+CONTACT PAGE
+=========================== */
 
-
-/* ======================================
-   REVIEWS
-====================================== */
-
-
-.reviews{
-
+.contact-section{
     width:90%;
     margin:60px auto;
-
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
 }
 
+.contact-box,
+.form-box{
+    background:#161616;
+    border:2px solid #D4AF37;
+    border-radius:15px;
+    padding:35px;
+}
 
+.contact-box h2,
+.form-box h2{
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+
+.info-list p{
+    color:#ddd;
+    margin-bottom:18px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:15px;
+    background:#111;
+    border:2px solid #333;
+    border-radius:8px;
+    color:#fff;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:#D4AF37;
+}
+
+.form-group textarea{
+    resize:none;
+    min-height:150px;
+}
+
+.send-btn{
+    width:100%;
+    background:#D4AF37;
+    color:#111;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:16px;
+    transition:.3s;
+}
+
+.send-btn:hover{
+    background:#fff;
+}
+
+/* ===========================
+CUSTOMER REVIEWS
+=========================== */
+
+.reviews{
+    width:90%;
+    margin:70px auto;
+}
 
 .reviews-grid{
-
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:25px;
-
 }
-
-
 
 .review-card{
-
     background:#161616;
     border:2px solid #D4AF37;
-    padding:25px;
     border-radius:15px;
+    padding:25px;
     text-align:center;
-
 }
-
-
 
 .review-card h4{
-
     color:#D4AF37;
     margin-top:15px;
-
 }
 
+.review-card p{
+    color:#ddd;
+    margin-top:10px;
+}
 
-
-/* ======================================
-   WHATSAPP SECTION
-====================================== */
-
+/* ===========================
+WHATSAPP SECTION
+=========================== */
 
 .whatsapp-section{
-
     width:100%;
-    padding:70px 20px;
     background:#111;
     text-align:center;
+    padding:70px 20px;
     border-top:2px solid #D4AF37;
     border-bottom:2px solid #D4AF37;
-
 }
-
-
 
 .whatsapp-section h2{
-
     color:#D4AF37;
     font-size:40px;
-
+    margin-bottom:15px;
 }
-
-
 
 .whatsapp-section p{
-
     color:#ddd;
-    margin:20px;
-
+    margin-bottom:25px;
 }
 
-
-
-/* ======================================
-   FOOTER
-====================================== */
-
+/* ===========================
+FOOTER
+=========================== */
 
 footer{
-
     background:#0b0b0b;
-    padding:50px 8%;
-    margin-top:60px;
-
+    padding:60px 8%;
 }
 
-
-
 .footer-content{
-
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:40px;
-
 }
-
-
 
 .footer-content h2,
 .footer-content h3{
-
     color:#D4AF37;
     margin-bottom:15px;
-
 }
-
-
 
 .footer-content p,
 .footer-content a{
-
-    color:#ddd;
-    line-height:28px;
-
+    color:#dddddd;
+    line-height:2;
 }
-
-
 
 .footer-content a:hover{
-
     color:#D4AF37;
-
 }
 
-
-
-hr{
-
+footer hr{
     margin:35px 0;
     border:1px solid #333;
-
 }
-
-
 
 .copyright{
-
     text-align:center;
     color:#999;
+    font-size:15px;
+}/*======================================
+ SK ROYAL STORE - STYLE.CSS
+ PART 3 (FINAL)
+======================================*/
 
-}/* ======================================
-   SK ROYAL STORE
-   PREMIUM CSS PART 3
-   RESPONSIVE + FINAL FIX
-====================================== */
+/* ===========================
+TABLET RESPONSIVE
+=========================== */
 
-
-/* TABLET */
-
-@media(max-width:992px){
-
-
-.header{
-
-    padding:15px 3%;
-
-}
-
-
-.navbar{
-
-    gap:15px;
-
-}
-
-
-.product-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-
-.features{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-
-.why-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-
-.product-detail{
-
-    grid-template-columns:1fr;
-
-}
-
-
-.footer-content{
-
-    grid-template-columns:1fr 1fr;
-
-}
-
-
-}
-
-
-
-/* MOBILE */
-
-@media(max-width:768px){
-
+@media (max-width:992px){
 
 .header{
-
-    flex-direction:column;
-    gap:15px;
-
+    padding:15px 4%;
 }
-
-
-
-.logo{
-
-    flex-direction:column;
-    text-align:center;
-
-}
-
-
 
 .navbar{
-
-    flex-wrap:wrap;
-    justify-content:center;
-
+    gap:18px;
 }
-
-
-
-.order-btn{
-
-    width:100%;
-    text-align:center;
-
-}
-
-
-
-/* HERO */
 
 .hero-slider{
+    height:500px;
+}
 
-    height:450px;
+.hero-overlay h1{
+    font-size:46px;
+}
+
+.hero-overlay h2{
+    font-size:28px;
+}
+
+.features{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.product-grid,
+.products-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.why-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.reviews-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.footer-content{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.product-detail{
+    grid-template-columns:1fr;
+}
+
+.contact-section{
+    grid-template-columns:1fr;
+}
+
+.gallery{
+    grid-template-columns:repeat(4,1fr);
+}
 
 }
 
+/* ===========================
+MOBILE RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+.header{
+    flex-direction:column;
+    text-align:center;
+    gap:18px;
+}
+
+.logo{
+    flex-direction:column;
+}
+
+.navbar{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.order-btn{
+    width:100%;
+    text-align:center;
+}
+
+.hero-slider{
+    height:420px;
+}
 
 .hero-overlay{
-
     left:5%;
     right:5%;
     text-align:center;
-
 }
-
-
 
 .hero-overlay h1{
-
-    font-size:35px;
-
+    font-size:34px;
 }
-
-
 
 .hero-overlay h2{
-
-    font-size:25px;
-
+    font-size:24px;
 }
 
-
+.hero-overlay p{
+    font-size:15px;
+}
 
 .hero-buttons{
-
     justify-content:center;
     flex-wrap:wrap;
-
 }
-
-
-
-/* PRODUCTS */
-
-.product-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-.product-card img{
-
-    height:200px;
-
-}
-
-
-
-/* FEATURES */
 
 .features{
-
     grid-template-columns:1fr;
-
 }
 
-
-
-/* WHY */
+.product-grid,
+.products-grid{
+    grid-template-columns:1fr;
+}
 
 .why-grid{
-
     grid-template-columns:1fr;
-
 }
-
-
-
-/* REVIEWS */
 
 .reviews-grid{
-
     grid-template-columns:1fr;
-
 }
-
-
-
-/* CONTACT */
-
-.contact-section{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-/* FOOTER */
 
 .footer-content{
-
     grid-template-columns:1fr;
-
 }
 
-
+.gallery{
+    grid-template-columns:repeat(2,1fr);
+}
 
 .page-banner h1{
-
-    font-size:35px;
-
+    font-size:34px;
 }
 
-
-.product-info h1{
-
-    font-size:32px;
-
+.page-banner p{
+    font-size:15px;
 }
-
-
-.whatsapp-section h2{
-
-    font-size:30px;
-
-}
-
-
-}
-
-
-
-/* SMALL MOBILE */
-
-@media(max-width:480px){
-
-
-.hero-slider{
-
-    height:380px;
-
-}
-
-
-.hero-overlay h1{
-
-    font-size:28px;
-
-}
-
 
 .section-title{
-
     font-size:30px;
+}
+
+.product-info h1{
+    font-size:30px;
+}
+
+.about-section{
+    padding:25px;
+}
+
+.contact-box,
+.form-box{
+    padding:25px;
+}
+
+.search-section input{
+    width:100%;
+}
+
+.categories{
+    gap:10px;
+}
+
+.categories button{
+    width:100%;
+}
+
+.whatsapp-section h2{
+    font-size:30px;
+}
 
 }
 
+/* ===========================
+SMALL MOBILE
+=========================== */
+
+@media (max-width:480px){
+
+.logo img{
+    width:55px;
+    height:55px;
+}
 
 .logo h2{
+    font-size:22px;
+}
 
-    font-size:24px;
+.hero-slider{
+    height:360px;
+}
+
+.hero-overlay h1{
+    font-size:28px;
+}
+
+.hero-overlay h2{
+    font-size:20px;
+}
+
+.hero-overlay p{
+    font-size:14px;
+}
+
+.product-card img{
+    height:180px;
+}
+
+.price{
+    font-size:22px;
+}
+
+.page-banner{
+    padding:50px 15px;
+}
+
+.section-title{
+    font-size:26px;
+}
 
 }
 
+/* ===========================
+ANIMATIONS
+=========================== */
 
-.product-card{
-
-    padding:12px;
-
+.product-card,
+.feature-box,
+.why-card,
+.review-card{
+    transition:.35s ease;
 }
 
+.product-card:hover,
+.feature-box:hover,
+.why-card:hover,
+.review-card:hover{
+    transform:translateY(-8px);
+}
 
+.gold-btn,
+.order-btn,
+.dark-btn,
+.send-btn,
+.categories button{
+    transition:.30s;
+}
+
+/* ===========================
+SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#D4AF37;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#b9921c;
+}
+
+/* ===========================
+FINAL FIX
+=========================== */
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+.hidden{
+    display:none;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.mt-20{
+    margin-top:20px;
+}
+
+.mb-20{
+    margin-bottom:20px;
+}
+
+.mb-40{
+    margin-bottom:40px;
+}
+
+html,
+body{
+    overflow-x:hidden;
 }
